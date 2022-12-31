@@ -1,0 +1,60 @@
+
+@import"https://pro.fontawesome.com/releases/v5.10.0/css/all.css";
+
+*{
+    box-sizing: border-box;
+    background-color:cornflowerblue;
+}
+
+.menu{
+    background-color:burlywood;
+    display: inline-flex;
+    margin-top: 0%;
+    margin-left: 20%;
+    border-radius: 5px;
+    background-color:aquamarine;
+
+}
+
+.menu a{
+    text-decoration: none;
+    color:lightcyan;
+    padding: 0 20px;
+    
+}
+
+.menu a:hover{
+    opacity: 65%;
+    background-color:black;
+}
+
+.nav-items {
+    list-style-type: none;
+    display:flex
+}
+
+.container{
+    margin: 30px;
+    
+}
+    
+
+.titulo{
+    
+    color: crimson;
+    margin-left: 30px;
+}
+
+.enunciado{
+    
+    margin-left: 20px;
+    color: brown;
+}
+
+.ejercicio{
+    background:cornflowerblue;
+    border-top: 5px solid gray;
+    padding: 0 20px;
+    margin-bottom:15px;
+}
+

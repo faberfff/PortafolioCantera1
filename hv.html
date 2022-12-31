@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <meta charset= "UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>curriculum vitae: Faber Fernández Fernández</title>
+         <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+         <script src="/Js/temas.js"></script>
+         
+     </head>
+
+     <body id="theme"> 
+      
+      <div class="container" id="container-info">
+
+        <div class="menu" id="menu-info">
+			<ul class="nav-items">
+			   <li><a href="/variableImpresion.html" class="btn1">Taller Variables e Impresión</a></li>
+			   <li><a href="/condicionales.html" class="btn1">Taller Condicionales</a></li>
+			   <li><a href="/ciclos.html" class="btn1">Taller Ciclos</a></li>
+			   <li><a href="/arreglos.html" class="btn1">Taller Arreglos</a></li>
+			   <li><a href="#" class="btn1">Hoja de vida</a></li>
+		 </ul>
+
+		 </div>
+
+         <div class="btn-tema">
+
+               <select id="selection" name="fondo" onchange="cambioFondo(this)">
+                  <option value="DarkSalmon">Salmon</option>
+                  <option value="Cyan">Cyan</option>
+                  <option value="Tomato">Tomato</option>
+               </select>
+   
+         </div>
+
+    <header> 
+
+      <div class="social">
+         <i class="fab fa-whatsapp"></i>
+         <i class="fab fa-linkedin"></i>
+     </div>
+         <h1 class="titulo"> CV de Faber Fernánez Fernández </h1>
+         
+         <div class="imagen col-md-12 col-lg d-flex aling-items-center justify-content-center justify-content-lg-start">
+            <a href="#"><img id="img" src="/img/fotoPerfil.jpeg" ></a>
+         </div>
+            
+
+               <div class="menu" id="menu-info">
+                  <ul class="nav-items">
+                     <li><a href="#" class="btn1">Información</a></li>
+                     <li><a href="/experienciaLaboral.html" class="btn2">Experiencia laboral</a></li>
+                     <li><a href="/referenciasPersonales.html" class="btn3">Referencias personales</a></li>
+                     <li><a href="/referenciasFamiliares.html" class="btn4">Referencias familiares</a></li>
+                     <li><a href="/estudios.html" class="btn5">Estudios realizados</a></li>
+               </ul>
+
+               </div>
+            
+            
+        
+  </header> 
+
+            <article class="article" id="article-info" >
+              <div id="ocultable1">
+               <p>Datos Personales</p>
+               <p>Faber Fernández Fernández</p>
+              </div>
+              <button class="btnMostrar" onclick="return mostrarOcultar('ocultable1')" type="button">Mostrar/Ocultar1</button>
+              
+              <div id="ocultable2">
+               <p>Cédula:</p>
+               <p>98.613.673</p>
+               <p>Fecha de nacimiento:</p>
+               <p>27 de diciembre de 1882</p>
+               <p>Números de contacto:</p>
+               <p>3103961688</p>
+              </div>
+              <button class="btnMostrar" onclick="return mostrarOcultar('ocultable2')" type="button">Mostrar/Ocultar2</button>
+
+           <div id="ocultable3">
+            <p>Email:</p>
+            <p>faverfff@gmail.com</p>
+            <p>Dirección:</p>
+            <p>Carrera 50 # 43 - 31 Urbanización los Nogales
+               Amagá (Antioquia)</p>
+         </div>
+         <button class="btnMostrar" onclick="return mostrarOcultar('ocultable3')" type="button">Mostrar/Ocultar3</button>
+         
+           <div id="ocultable4">
+            <p>Tecnólogo en desarrollo de software de la IUDIGITAL de Antioquia, capaz de desarrollar
+               soluciones para los sistemas de información  y el desarrollo de software, con habilidades
+               para trabajar en equipo, discernimiento en sistemas operativos que facilitan  él desarrollo
+               de aplicaciones de software, bases de datos relacionales y tecnologías de la
+               información.</p>
+         </div>
+         <button class="btnMostrar" onclick="return mostrarOcultar('ocultable4')" type="button">Mostrar/Ocultar4</button>            
+            </article>
+         
+            <div class="download">
+               <li><a href="/hojaVida/HVFaberFernandez2022.pdf" target="_blank" download>Download</a></li>
+            </div>
+
+         </div> 
+         <script>mostrarOcultar ()</script>       
+ </body>
+</html>

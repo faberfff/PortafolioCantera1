@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="/Css/style.css" type="text/css"/>
+	<link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="menu" id="menu-info">
+			<ul class="nav-items">
+			   <li><a href="#" class="btn1">Taller Variables e Impresión</a></li>
+			   <li><a href="/condicionales.html" class="btn1">Taller Condicionales</a></li>
+			   <li><a href="/ciclos.html" class="btn1">Taller Ciclos</a></li>
+			   <li><a href="/arreglos.html" class="btn1">Taller Arreglos</a></li>
+			   <li><a href="/hv.html" class="btn1">Hoja de vida</a></li>
+		 </ul>
+
+		 </div>
+
+        <h1 class="titulo">Taller de variables e impresión desarrollo en PsInt</h1>
+		<div class="tImpresionPsInt" id="portafolio">
+			<div class="ejercicio">
+				<h2 class="enunciado">1. Realizar un programa el cual solicite su nombre y apellidos.</h2>
+				<pre>
+					<code class="language-css" >
+						Proceso miPrimerApp
+						Definir nombre Como Caracter;
+						Definir apellido Como Caracter;
+						Escribir "¿Cúal es tu nombre?";
+						Leer nombre;
+						Escribir "¿Cúal es tu apellido?";
+						Leer apellido;
+						
+						Limpiar Pantalla;
+						
+						Escribir "Mi nombre es:", nombre, " ", apellido;
+					
+					FinProceso
+					</code>
+				</pre>
+			</div>
+		
+		<div class="ejercicio">
+		<h2 class="enunciado">2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</h2>
+		  <pre>
+			 <code class="language-css">
+				Proceso ejercicio2
+				Definir nombre Como Caracter;
+				Definir apellido Como Caracter;
+				Definir edad Como Entero;
+				Definir estatura Como Real;
+				
+				Escribir "¿Cúal es su nombre?"; 
+				Leer nombre;
+				Escribir "¿Cúal es su apellido?";
+				Leer apellido;
+				Escribir "¿Cúal es su edad?";
+				Leer edad;
+				Escribir "¿Cúal es su estatura?";
+				Leer estatura;
+				
+				Limpiar Pantalla;
+				
+				Escribir "Mi nombre es: ", nombre, " ", apellido, " ", "tengo ", edad, " ", "años de edad ", " ", "mido ", estatura, " ", "de estatura ";
+				
+			FinProceso
+			 </code>
+		  </pre>
+		  </div>
+
+		<div class="ejercicio">
+			<h2 class="enunciado">3. Realizar un programa el cual solicite su nombre y apellidos, también debe
+				<br> capturar nombre y
+				apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente
+				<br>
+				mensaje "Yo
+				[Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h2>
+			<pre>
+				<code class="language-css">
+					Proceso sin_titulo
+					Definir nombre Como Caracter;
+					Definir apellido Como Caracter;
+					Definir nPadre Como Caracter;
+					Definir aPadre Como Caracter;
+					Definir nMadre Como Caracter;
+					Definir aMadre Como Caracter;
+					
+					Escribir "¿Cúal es su nombre?";
+					Leer nombre;
+					Escribir "¿Cúal es su apellido?";
+					Leer apellido;
+					Escribir "¿ Nombre completo del padre?";
+					Leer nPadre;
+					Escribir "¿ Nombre completo de la madre?";
+					Leer nMadre;
+					
+					Limpiar Pantalla;
+	
+					Escribir "Yo ", nombre ," ", apellido , " soy hijo (hija) de ", nMadre ," ", " y ", nPadre;
+					
+				FinProceso
+				</code>
+				
+			</pre>
+		</div>
+        
+		<div class="ejercicio">
+			<h2 class="enunciado">4. Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe <br>
+				imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad],
+				es la capital del <br>
+				país [Nombre del País]</h2>
+			<pre>
+				<code class="language-css">
+					Proceso ejercicio4
+					Definir ciudadCapital Como Caracter;
+					Definir pais Como Caracter;
+					
+					Escribir "Digita un nombre de una ciudad capital";
+					Leer ciudadCapital;
+					Escribir "Digita el país del cual es capital la ciudad anterior";
+					Leer pais;
+					
+					Limpiar Pantalla;
+					
+					Escribir "Laciudad ", ciudadCapital , " Es la capital de ", pais;
+					
+				FinProceso
+				</code>
+				
+			</pre>
+
+		</div>
+
+		<div class="ejercicio">
+			<h2 class="enunciado">5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de <br>
+				mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla
+				el siguiente <br>
+				mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] <br>
+				años de edad y [Nombre Completo] es actualmente su dueño(a).</h2>
+			<pre>
+				<code class="language-css">
+					Proceso sin_titulo
+					Definir nMascota Como Caracter;
+					Definir edad Como Entero;
+					Definir tipoMascota Como Caracter;
+					Definir nombreD Como Caracter;
+					
+					Escribir "Digita el nombre de tu mascota";
+					Leer nMascota;
+					Escribir "¿Cúal es su edad?";
+					Leer edad;
+					Escribir "¿Que tipo de mascota es?";
+					Leer tipoMascota;
+					Escribir "Nombre de su dueño";
+					Leer nombreD;
+					
+					Limpiar Pantalla;
+					
+					Escribir nMascota, " ", "Es un (una) ", tipoMascota, " ", " El cual tiene ", edad, " ", "Años de edad y ", nombreD, " ", "es actualmente su dueño"; 
+				FinProceso
+				</code>
+			
+			</pre>
+		</div>
+
+	</div>
+
+	<h1 class="titulo">Taller impresion desarrollado en java</h1>
+	<div class="tImpresionJava">
+		<div class="ejercicio">
+			<h2 class="enunciado">1. Realizar un programa el cual solicite su nombre y apellidos.</h2>
+            <pre>
+				<code class="language-java">
+                    package Ejercicio1;
+				 import java.util.Scanner;
+				 public class NombreApellido {
+				 Scanner lector = new Scanner(System.in);
+					 public void capturarNombre(){
+						 String nombre;
+						 String apellido;
+						 System.out.println("Digita tu nombre");
+						 nombre = lector.nextLine();
+						 System.out.println("Digita tu Apellido");
+						 apellido = lector.nextLine();
+						 System.out.println(nombre + " " + apellido);
+					 }
+				 }
+
+				 package Ejercicio1;
+
+				 import java.util.Scanner;
+ 
+				 public class Main1 {
+					 public static void main(String[] args) {
+ 
+						 NombreApellido nombre = new NombreApellido();
+						 nombre.capturarNombre();
+ 
+					 }
+				 }
+				</code>
+				
+			 </pre>
+		</div>
+
+		<div class="ejercicio">
+			<h2 class="enunciado">2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</h2>
+
+			<pre>
+				<code class="language-java">
+					package Ejercicio2;
+
+					import java.util.Scanner;
+	
+					public class NombreEdadEstatura {
+	
+					Scanner lector = new Scanner(System.in);
+	
+						public void capturarDatos(){
+	
+							String nombre;
+							String apellido;
+							int edad;
+							Double estatura;
+	
+							System.out.println("Digita tu nombre");
+							nombre = lector.nextLine();
+	
+							System.out.println("Digita tu Apellido");
+							apellido = lector.nextLine();
+	
+							System.out.println("Digita tu edad");
+							edad = lector.nextInt();
+	
+							System.out.println("Digita tu estatura");
+							estatura = lector.nextDouble();
+	
+							System.out.println( " Mi nombre es "+ nombre + " " + apellido + " Tengo " + edad + " años de edad, mido " + estatura + " de estatura");
+						}
+					}
+
+					package Ejercicio2;
+
+				import java.util.Scanner;
+
+				public class Main2 {
+
+					public static void main(String[] args) {
+
+						NombreEdadEstatura datos = new NombreEdadEstatura();
+						datos.capturarDatos();
+					}
+				}
+				</code>
+				
+			</pre>
+
+		</div>
+
+		<div class="ejercicio">
+			<h2 class="enunciado">3. Realizar un programa el cual solicite su nombre y apellidos, también debe
+				<br> capturar nombre y
+				apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente
+				<br>
+				mensaje "Yo
+				[Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h2>
+
+			<pre>
+				<code class="language-java">
+					package Ejercicio3;
+
+					import java.util.Scanner;
+	
+					public class CapturaDatosPadres {
+	
+						Scanner lector = new Scanner(System.in);
+	
+						public void imprimirDatos() {
+							String nombre;
+							String nombreP;
+							String nombreM;
+	
+							System.out.println("Digita tu nombre completo");
+							nombre = lector.nextLine();
+	
+							System.out.println("Digita nombre completo de la madre");
+							nombreM = lector.nextLine();
+	
+							System.out.println("Digita tu edad");
+							nombreP = lector.nextLine();
+	
+	
+							System.out.println( " Yo "+ nombre + " soy hijo de " + nombreM + " y " +nombreP );
+	
+						}
+	
+					}
+
+					package Ejercicio3;
+
+				public class Main3 {
+
+					public static void main(String[] args) {
+
+						CapturaDatosPadres datos = new CapturaDatosPadres();
+						datos.imprimirDatos();
+					}
+				}
+				</code>
+				
+			</pre>	
+
+		</div>
+
+		<div class="ejercicio">
+			<h2 class="enunciado">4. Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe <br>
+				imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad],
+				es la capital del <br>
+				país [Nombre del País]</h2>
+
+		<pre>
+			<code class="language-java">
+                package Ejercicio4;
+
+			import java.util.Scanner;
+
+			public class CiudadCapital {
+
+				Scanner lector = new Scanner(System.in);
+
+				public void imprimirCiudad() {
+					String ciudadCapital;
+					String pais;
+
+					System.out.println("Digita el nombre de la ciudad");
+					ciudadCapital = lector.nextLine();
+
+					System.out.println("Digita el nombre del pais");
+					pais = lector.nextLine();
+
+
+					System.out.println( "La ciudad "+ ciudadCapital + " es la capital del país " + pais );
+
+				}
+			}
+
+			package Ejercicio4;
+
+			public class Main4 {
+
+				public static void main(String[] args) {
+
+					CiudadCapital ciudad = new CiudadCapital();
+					ciudad.imprimirCiudad();
+				}
+			}
+			</code>
+			
+		</pre>
+		</div>
+
+		<div class="ejercicio">
+			<h2 class="enunciado">5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de <br>
+				mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla
+				el siguiente <br>
+				mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] <br>
+				años de edad y [Nombre Completo] es actualmente su dueño(a).</h2>
+
+			<pre>
+				<code class="language-java">
+					package Ejercicio5;
+
+					import java.util.Scanner;
+	
+					public class Mascota {
+	
+					Scanner lector = new Scanner(System.in);
+	
+						public void imprimirDatos() {
+							String nombreMascota;
+							int edadMascota;
+							String tipoMascota;
+							String nombrePersona;
+	
+							System.out.println("Digita tu nombre de su mascota");
+							nombreMascota = lector.nextLine();
+	
+							System.out.println("Digita la edad de la mascota");
+							edadMascota = lector.nextInt();
+	
+							System.out.println("Digita el tipo de mascota");
+							tipoMascota = lector.next();
+	
+							System.out.println("Digita el nombre del propietario");
+							nombrePersona = lector.next();
+	
+	
+							System.out.println( nombreMascota + " es un(a) " + tipoMascota +
+									", el cual, tiene " +edadMascota + " años de edad y "
+									+ nombrePersona + " es actualmente su dueño(a)" );
+	
+						}
+					}
+
+					package Ejercicio5;
+
+					public class Main5 {
+	
+						public static void main(String[] args) {
+	
+							Mascota mascota = new Mascota();
+							mascota.imprimirDatos();
+						}
+					}
+				</code>
+			</pre>
+			
+		</div>
+		
+
+	</div>
+</div>
+
+	
+   
+    
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Arreglos</title>
+    <link rel="stylesheet" href="/Css/style.css" type="text/css"/>
+	<link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+
+        <div class="menu" id="menu-info">
+			<ul class="nav-items">
+			   <li><a href="/variableImpresion.html" class="btn1">Taller Variables e Impresión</a></li>
+			   <li><a href="/condicionales.html" class="btn2">Taller Condicionales</a></li>
+			   <li><a href="/ciclos.html" class="btn3">Taller Ciclos</a></li>
+			   <li><a href="#" class="btn4">Taller Arreglos</a></li>
+               <li><a href="/hv.html" class="btn1">Hoja de vida</a></li>
+		 </ul>
+
+		 </div>
+
+        <h1 class="titulo">Taller de Arreglos desarrollo en PsInt</h1>
+		<div class="tImpresionPsInt" id="portafolio">
+			<div class="ejercicio">
+				<h2 class="enunciado">1. Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuari <br>
+                    Después de recoger toda la información, se requiere imprimir el índice de cada
+                    posición en <br>
+                    arreglo con su valor de la siguiente manera:</h2>
+				<pre>
+					<code class="language-css" >
+					    Proceso Ejercicio1Vectores
+                        Definir i Como Entero;
+                        Definir  valores Como Entero;
+                        Dimension valores[5];
+                        
+                        Para i <- 0 Hasta 4 Con Paso 1 Hacer
+                            
+                            Escribir "Digita el numero a imprimir en el vector";
+                            Leer valores[i];
+                        FinPara
+
+                        
+                        Para i<-0 Hasta 4 Con Paso 1 Hacer
+                            Escribir "[",[i],"]", " = " , valores[i];
+                        FinPara
+                        
+                    FinProceso
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con número <br>
+                    aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a <br>
+                    recorre
+                    utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impare <br>
+                    Ejemplo <br>
+                    Números pares: 2, 4, 6, 8, 10 <br>
+                    Números impares: 1, 3, 5, 7, 9</h2>
+				<pre>
+					<code class="language-css" >
+
+                        Proceso Ejercicio2Arreglos
+                        Definir numerosAleatorios Como Entero;
+                        Definir num Como Entero;
+                        Definir i Como Entero;
+                        Definir contador Como Entero;
+                        Dimension num[20];
+                        
+                        i <- 0;
+                        Mientras i < 20 Hacer
+                            numerosAleatorios <- 1 +Azar(100);
+                            num[i] <- numerosAleatorios;
+                            Escribir num[i]," ",Sin Saltar;
+                            
+                            i <- i +1;
+                            
+                        FinMientras
+                        Escribir "";
+                        contador<-0;
+                        
+                        Escribir "";
+                        Escribir "Números pares: "Sin Saltar;
+                        
+                        Para i<-0 Hasta 19 Con Paso 1 Hacer
+                            Si (num[i] MOD 2 = 0) Entonces
+                                
+                                Escribir num[i],","," "Sin Saltar;
+                                
+                            FinSi	
+                            
+                        FinPara
+                        Escribir "";
+                        Escribir "Números impares: "Sin Saltar;
+                        Para i<-0 Hasta 19 Con Paso 1 Hacer
+                            Si (num[i] MOD 2 <> 0) Entonces
+                                
+                                Escribir num[i],","," "Sin Saltar; 
+                            FinSi	
+                            
+                        FinPara
+                        
+                    FinProceso
+
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso Ejercicio3Primos
+                        Definir num Como Entero;
+                        Definir i Como Entero;
+                        Definir contador Como Entero;
+                        
+                        
+                        
+                        Para i<-0 Hasta 999 Con Paso 1 Hacer
+                            num <- 1;
+                            contador <- 0;
+                            Mientras num <= i Hacer
+                                Si i MOD num == 0 Entonces
+                                    contador <- contador + 1;
+                                SiNo
+                                    contador <- contador;
+                                FinSi
+                                num <- num + 1;
+                            FinMientras
+                            
+                            Si contador == 2 Entonces
+                                Escribir i ;
+                            FinSi
+                            
+                        FinPara
+                        
+                    FinProceso
+                    
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código <br>
+                    01 02 03 04 05 <br>
+                    06 07 08 09 10 <br>
+                    11 12 13 14 15 <br>
+                    16 17 18 19 20</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso MatrizBidimencional
+                                Definir valores Como Caracter;
+                                Definir fila Como Entero;
+                                Definir columna Como Entero;
+                                Definir i Como Entero;
+                                Definir j Como Entero;
+
+                                Dimension valores[4,5];
+                                Definir x Como Entero;
+                                
+                                i<-0;
+                                j<-0;
+                                valores[0,0] <- "01";
+                                valores[0,1] <- "02";
+                                valores[0,2] <- "03";
+                                valores[0,3] <- "04";
+                                valores[0,4] <- "05";
+                                
+                                valores[1,0] <- "06";
+                                valores[1,1] <- "07";
+                                valores[1,2] <- "08";
+                                valores[1,3] <- "09";
+                                valores[1,4] <- "10";
+                                
+                                valores[2,0] <- "11";
+                                valores[2,1] <- "12";
+                                valores[2,2] <- "13";
+                                valores[2,3] <- "14";
+                                valores[2,4] <- "15";
+                                
+                                valores[3,0] <- "16";
+                                valores[3,1] <- "17";
+                                valores[3,2] <- "18";
+                                valores[3,3] <- "19";
+                                valores[3,4] <- "20";
+                                
+                                Para fila<-0 Hasta 3 Con Paso 1 Hacer
+                                    Para columna<-0 Hasta 4 Con Paso 1 Hacer
+                                        Escribir valores[fila,columna], "  ",Sin Saltar;
+                                        
+                                    FinPara
+                                    Escribir "";
+                                FinPara
+                                Escribir "";
+                                
+                                Para fila<-0 Hasta 3 Con Paso 1 Hacer
+                                    
+                                    Para columna<-4 Hasta 0 Con Paso -1 Hacer
+                                        Si fila MOD 2 <> 0 Entonces
+                                            valores[i,j] <- valores[fila,columna];
+                                            Escribir valores[i,j],"  ",Sin Saltar;
+                                        FinSi
+                                        
+                                    FinPara
+                                    Para columna<-0 Hasta 4 Con Paso 1 Hacer
+                                        Si fila MOD 2 == 0 Entonces
+                                            valores[i,j] <- valores[fila,columna];
+                                            Escribir valores[i,j],"  ", Sin Saltar;
+                                        FinSi
+                                    FinPara
+                                    
+                                    Escribir "";
+                                FinPara
+                                
+                            FinProceso
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">5. Se debe de imprimir el siguiente cuadro</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso tablasMultiplicar
+                        Definir matriz Como Entero;
+                        Definir fila Como Entero;
+                        Definir columna Como Entero;
+                        Definir filaNumero Como Entero;
+                        Definir columnaNumero Como Entero;
+                        Definir resultado Como Entero;
+                        Dimension matriz[10,10];
+                        
+                        resultado<-0;
+                        filaNumero <- 1;
+                        columnaNumero <- 1;
+                        
+                        Escribir "________________________________________________________________  ";
+                        Escribir "  |                COLUMNAS                                       ";
+                        Escribir "  |      0     1     2     3     4     5     6     7     8     9 |";
+                        Escribir "__|______________________________________________________________  ";
+                        Escribir "  | 0 | 1x1   2x1   3x1   4x1   5x1   6x1   7x1   8x1   9x1  10x1  ";
+                        Escribir "  | 1 | 1x2   2x2   3x2   4x2   5x2   6x2   7x2   8x2   9x2  10x2  ";
+                        Escribir "  | 2 | 1x3   2x3   3x3   4x1   5x3   6x3   7x3   8x3   9x3  10x3  ";
+                        Escribir "F | 3 | 1x4   2x4   3x4   4x4   5x4   6x4   7x4   8x4   9x4  10x4  ";
+                        Escribir "I | 4 | 1x5   2x5   3x5   4x5   5x5   6x5   7x5   8x5   9x5  10x5  ";
+                        Escribir "L | 5 | 1x6   2x6   3x6   4x6   5x6   6x6   7x6   8x6   9x6  10x6  ";
+                        Escribir "A | 6 | 1x7   2x7   3x7   4x7   5x7   6x7   7x7   8x7   9x7  10x7  ";
+                        Escribir "S | 7 | 1x8   2x8   3x8   4x8   5x8   6x8   7x8   8x8   9x8  10x8  ";
+                        Escribir "  | 8 | 1x9   2x9   3x9   4x9   5x9   6x9   7x9   8x9   9x9  10x9  ";
+                        Escribir "  | 9 | 1x10  2x10  3x10  4x10  5x10  6x10  7x10  8x10  9x10 10x10 ";
+                        
+                        Para fila<-0 Hasta 9 Con Paso 1 Hacer
+                            
+                            Para columna<-0 Hasta 9 Con Paso 1 Hacer
+                                matriz[fila,columna] <- ((fila + 1)*(columna + 1));
+                            
+                            FinPara
+                            
+                        FinPara
+                        
+                        Escribir "Ingresa el número de la fila que deseas conocer";
+                        Leer filaNumero;
+                        
+                        Escribir "Ingresa el número de la columna que deseas conocer";
+                        Leer columnaNumero;
+                        
+                        Para fila<-0 Hasta 9 Con Paso 1 Hacer
+                            Para columna<-0 Hasta 9 Con Paso 1 Hacer
+                                
+                                Si matriz[fila,columna] == matriz[filaNumero,columnaNumero] Entonces
+                                    resultado <- matriz[fila,columna];
+                                    
+                                FinSi
+                            FinPara
+                            
+                        FinPara
+                        Escribir "El resultado de la multiplicación indicada es : ",resultado;
+                        
+                        
+                    FinProceso
+     
+					</code>
+				</pre>
+			</div>
+
+
+            <h1 class="titulo">Taller de Arreglos desarrollo en Java</h1>
+            <div class="ejercicio">
+                <h2 class="enunciado">1. Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuari <br>
+                    Después de recoger toda la información, se requiere imprimir el índice de cada
+                    posición en <br>
+                    arreglo con su valor de la siguiente manera: <br>
+                    [0] = 55 <br>
+                    [1] = 99 <br>
+                    [2] = 11 <br>
+                    [3] = 56 <br>
+                    [4] = 69</h2>
+                <pre>
+                    <code class="language-java" >
+                        package Ejercicio1;
+
+                        import java.io.BufferedReader;
+                        import java.io.IOException;
+                        import java.io.InputStreamReader;
+
+                        public class Vector {
+
+                            BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                            private int[] numeros;
+
+                            public Vector(){
+                                this.numeros = new int[5];
+                            }
+
+                            public Vector(int tamanio) {
+                                this.numeros = new int[tamanio];
+                            }
+
+                            public int[] llenarVector() throws IOException {
+
+                                for (int i = 0; i < numeros.length; i++) {
+                                    System.out.println("ingresa un numero ");
+                                    numeros[i] = Integer.parseInt(bfr.readLine());
+
+                                }
+                                return numeros;
+                            }
+
+                            public void listarFigura(int[] numeros) {
+
+                                System.out.println("");
+
+                                for (int i = 0; i < numeros.length; i++) {
+                                    System.out.println("[" + i + "]" + " = " + numeros[i]);
+
+                                }
+                            }
+
+                        }
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="ejercicio">
+                <h2 class="enunciado">2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con número <br>
+                    aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a <br>
+                    recorre
+                    utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impare <br>
+                    Ejemplo
+                    Números pares: 2, 4, 6, 8, 10 <br>
+                    Números impares: 1, 3, 5, 7, 9</h2>
+                <pre>
+                    <code class="language-java" >
+                        package Ejercicio2;
+
+                        import java.io.BufferedReader;
+                        import java.io.IOException;
+                        import java.io.InputStreamReader;
+                        
+                        public class Arreglo2 {
+                        
+                            BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                            private int[] numeros;
+                        
+                            public Arreglo2(){
+                                this.numeros = new int[20];
+                            }
+                        
+                            public Arreglo2(int tamanio) {
+                                this.numeros = new int[tamanio];
+                            }
+                        
+                            public int[] llenarVectorAleatorios() throws IOException {
+                                int numeroAleatorio = 0;
+                                int i = 0;
+                        
+                                while (i < 20) {
+                                    numeroAleatorio = (int) (Math.random() * 100 + 1);
+                                    numeros[i] = numeroAleatorio;
+                        
+                                    System.out.println(numeros[i]);
+                                    System.out.print("");
+                                    i = i + 1;
+                                }
+                                return numeros;
+                            }
+                        
+                            public void mostarNPares(int[] numeros) throws IOException {
+                        
+                                System.out.print("Números pares: ");
+                                for (int i = 0; i < numeros.length; i++) {
+                                    if(numeros[i] % 2 == 0) {
+                                        System.out.print( numeros[i] + ", ");
+                                    }
+                                }
+                                System.out.print("");
+                            }
+                        
+                            public void mostarInpares(int[] numeros) throws IOException {
+                        
+                                System.out.println("");
+                                System.out.print("Números Impares: ");
+                                for (int i = 0; i < numeros.length; i++) {
+                        
+                                    if(numeros[i] % 2 != 0) {
+                                        System.out.print( numeros[i] + ", ");
+                                    }
+                                }
+                            }
+                        }
+
+                        package Ejercicio2;
+
+                        import Ejercicio1.Vector;
+
+                        import java.io.BufferedReader;
+                        import java.io.IOException;
+                        import java.io.InputStreamReader;
+
+                        public class Main2 {
+
+                            public static void main(String[] args) throws IOException {
+
+                                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                Arreglo2 arreglo2 = new Arreglo2();
+                                int numeros[] = new int[20];
+
+                                System.out.println("Numeros aleatorios");
+                                System.out.print("");
+                                numeros = arreglo2.llenarVectorAleatorios();
+                                /*System.out.println("Numeros pares del vector aleatorio");
+                                System.out.print("");*/
+                                arreglo2.mostarNPares(numeros);
+                            /* System.out.println("Numeros impares del vector aleatorio");
+                                System.out.print("");*/
+                                arreglo2.mostarInpares(numeros);
+
+                            }
+
+                        }
+
+                        
+    
+                    </code>
+                </pre>
+            </div>
+
+            <div class="ejercicio">
+                <h2 class="enunciado">3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática</h2>
+                <pre>
+                    <code class="language-java" >
+                        package Ejercicio3;
+
+                        public class NumerosPrimos {
+                        
+                            public NumerosPrimos() {
+                        
+                            }
+                        
+                            public void mostrarPrimos() {
+                        
+                        
+                        
+                        
+                                for (int i = 0; i < 999; i++) {
+                                    int numero = 1;
+                                    int contador = 0;
+                                    while (numero <= i) {
+                                        if (i % numero == 0) {
+                                            contador = contador + 1;
+                                        }else {
+                                            contador = contador;
+                                        }
+                                        numero++;
+                                    }
+                                    if (contador == 2){
+                                        System.out.println(i);
+                                    }
+                        
+                                }
+                            }
+                        }
+
+                        package Ejercicio3;
+
+                        public class Main3 {
+
+                            public static void main(String[] args) {
+                                NumerosPrimos numerosPrimos = new NumerosPrimos();
+                                numerosPrimos.mostrarPrimos();
+                            }
+
+                        }
+                                
+                    </code>
+                </pre>
+            </div>
+
+            <div class="ejercicio">
+                <h2 class="enunciado">4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código <br>
+                    01 02 03 04 05 <br>
+                    06 07 08 09 10 <br>
+                    11 12 13 14 15 <br>
+                    16 17 18 19 20</h2>
+                <pre>
+                    <code class="language-java" >
+                        package Ejercicio4;
+
+                        public class MatrizValoresManuales {
+
+                            private String[][] valores = new String[4][5];
+                            public MatrizValoresManuales(){
+
+                            }
+
+                            public String[][] llenarMatriz() {
+
+
+                                valores[0][0] = "01";
+                                valores[0][1] = "02";
+                                valores[0][2] = "03";
+                                valores[0][3] = "04";
+                                valores[0][4] = "05";
+
+                                valores[1][0] = "06";
+                                valores[1][1] = "07";
+                                valores[1][2] = "08";
+                                valores[1][3] = "09";
+                                valores[1][4] = "10";
+
+                                valores[2][0] = "11";
+                                valores[2][1] = "12";
+                                valores[2][2] = "13";
+                                valores[2][3] = "14";
+                                valores[2][4] = "15";
+
+                                valores[3][0] = "16";
+                                valores[3][1] = "17";
+                                valores[3][2] = "18";
+                                valores[3][3] = "19";
+                                valores[3][4] = "20";
+
+                                return valores;
+                            }
+
+                            public void mostrarMatriz(String[][] valores) {
+
+                                for (int i = 0; i <= 3; i++) {
+                                    for (int j = 0; j <= 4; j++) {
+                                        System.out.print(valores[i][j] + " ");
+                                    }
+                                    System.out.println("");
+                                }
+                            }
+
+
+                            public void invertirMatriz(String[][] valores) {
+                                int i = 0;
+                                int j = 0;
+                                for (int fila = 0; fila <= 3; fila++) {
+                                    for (int columna = 4; columna >= 0; columna--) {
+                                        if (fila % 2 != 0) {
+
+                                            valores[i][j] = valores[fila][columna];
+                                            System.out.print(valores[i][j] + " ");
+                                        }
+                                    }
+                                    for (int columna = 0; columna <= 4; columna++) {
+                                        if (fila % 2 == 0) {
+
+                                            valores[i][j] = valores[fila][columna];
+                                            System.out.print(valores[i][j] + " ");
+                                        }
+                                    }
+                                    System.out.println("");
+                                }
+
+                            }
+
+                        }
+
+                        package Ejercicio4;
+
+                        public class Main4 {
+
+                            public static void main(String[] args) {
+
+                                MatrizValoresManuales matrizValoresManuales = new MatrizValoresManuales();
+                                String[][] valores = new String[4][5];
+                                valores = matrizValoresManuales.llenarMatriz();
+                                matrizValoresManuales.mostrarMatriz(valores);
+                                System.out.println("");
+                                matrizValoresManuales.invertirMatriz(valores);
+                            }
+                        }
+
+                    </code>
+                </pre>
+            </div>
+
+            <div class="ejercicio">
+                <h2 class="enunciado">5. Se debe de imprimir el siguiente cuadro</h2>
+                <pre>
+                    <code class="language-java" >
+                        package Ejercicio5;
+
+                        import java.io.BufferedReader;
+                        import java.io.IOException;
+                        import java.io.InputStreamReader;
+
+                        public class MatrizTablas {
+
+                            BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                            private int[][] matriz = new int[10][10];
+
+                            public MatrizTablas(){
+
+                            }
+
+                            public void mostrarDatos() {
+                                System.out.println("---------------------------------------------------------------   ");
+                                System.out.println("   |              COLUMNAS                                        ");
+                                System.out.println("   |      0     1     2     3     4     5     6     7     8     9 ");
+                                System.out.println("---------------------------------------------------------------   ");
+                                System.out.println("   | 0 | 1x1   2x1   3x1   4x1   5x1   6x1   7x1   8x1   9x1  10x1");
+                                System.out.println("   | 1 | 1x2   2x2   3x2   4x2   5x2   6x2   7x2   8x2   9x2  10x2");
+                                System.out.println("   | 2 | 1x3   2x3   3x3   4x3   5x3   6x3   7x3   8x3   9x3  10x3");
+                                System.out.println(" F | 3 | 1x4   2x4   3x4   4x4   5x4   6x4   7x4   8x4   9x4  10x4");
+                                System.out.println(" I | 4 | 1x5   2x5   3x5   4x5   5x5   6x5   7x5   8x5   9x5  10x5");
+                                System.out.println(" L | 5 | 1x6   2x6   3x6   4x6   5x6   6x6   7x6   8x6   9x6  10x6");
+                                System.out.println(" A | 6 | 1x7   2x7   3x7   4x7   5x7   6x7   7x7   8x7   9x7  10x7");
+                                System.out.println(" S | 7 | 1x8   2x8   3x8   4x8   5x8   6x8   7x8   8x8   9x8  10x8");
+                                System.out.println("   | 8 | 1x9   2x9   3x9   4x9   5x9   6x9   7x9   8x9   9x9  10x9");
+                                System.out.println("   | 9 | 1x10  2x10  3x10  4x10  5x10  6x10  7x10  8x10  9x10 10x10");
+                            }
+
+                            public void operacion() throws IOException {
+
+                                int resultado = 0;
+                                int numeroFila;
+                                int numeroColumna;
+                                for (int i = 0; i < 10; i++) {
+                                    for (int j = 0; j < 10; j++){
+                                        matriz[i][j] = ((i + 1) * (j + 1));
+                                    }
+                                }
+
+                                System.out.println("Ingresa el numero de la fila que desea conocer el resultado ");
+                                numeroFila = Integer.parseInt(bfr.readLine());
+                                System.out.println("Ingresa el numero de la columna que desea conocer el resultado ");
+                                numeroColumna = Integer.parseInt(bfr.readLine());
+
+                                for (int fila = 0; fila < 10; fila++) {
+                                    for (int columna = 0; columna < 10; columna++) {
+                                        if (matriz[fila][columna] == matriz[numeroFila][numeroColumna]){
+                                            resultado = matriz[fila][columna];
+                                        }
+                                    }
+                                }
+
+                                System.out.println("el resultado de la multiplicacion indicada es "  + resultado);
+                            }
+                        }
+
+                        package Ejercicio5;
+
+                        import java.io.IOException;
+
+                        public class Main5 {
+
+                            public static void main(String[] args) throws IOException {
+                                MatrizTablas matrizTablas = new MatrizTablas();
+
+                                matrizTablas.mostrarDatos();
+                                matrizTablas.operacion();
+                            }
+                        }
+
+    
+                    </code>
+                </pre>
+            </div>
+
+
+
+
+    </div>
+		
+    
+</body>
+</html>

@@ -1,0 +1,2931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+    <link rel="stylesheet" href="/Css/style.css" type="text/css"/>
+	<link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="menu" id="menu-info">
+			<ul class="nav-items">
+			   <li><a href="/variableImpresion.html" class="btn1">Taller Variables e Impresión</a></li>
+			   <li><a href="#" class="btn2">Taller Condicionales</a></li>
+			   <li><a href="/ciclos.html" class="btn3">Taller Ciclos</a></li>
+			   <li><a href="/arreglos.html" class="btn4">Taller Arreglos</a></li>
+               <li><a href="/hv.html" class="btn1">Hoja de vida</a></li>
+		 </ul>
+
+		 </div>
+
+     <h1 class="titulo">Taller de condicionales desarrollo en PsInt</h1>
+
+     <div class="ejercicio">
+        <h2 class="enunciado">1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o <br>
+            igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</h2>
+        <pre>
+            <code class="language-css" >
+                Proceso Ejercicio1
+	
+                Definir edad Como Entero;
+                
+                
+                Escribir "Bienvenido(a) a cantera#1 ¿Cual es su edad?";
+                Leer edad;
+                
+                Limpiar Pantalla;
+                
+                Si edad >= 18 Entonces
+                    Escribir "Usted es mayor de edad";
+                SiNo
+                    Escribir "Usted es menor de edad";
+                    
+                FinSi
+                
+            FinProceso
+            </code>
+        </pre>
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 <br>
+            años, deberá mostrar en pantalla: Usted aún es un niño(a).</h2>
+        <pre>
+            <code class="language-css" >
+                Proceso Ejercicio2
+	
+                Definir edad Como Entero;
+                
+                Escribir "Bienvenido(a) al sistema por favor digita tu edad";
+                Leer edad;
+                
+                Limpiar Pantalla;
+                
+                Si edad < 18 Entonces
+                    Escribir "Usted aún es un niño(a)";
+                SiNo
+                    Escribir "Pude ingresar sus credenciales ya eres mayor de edad";
+                    
+                FinSi
+                
+            FinProceso
+            </code>
+        </pre>
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la <br>
+            persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla
+            [Nombre <br>
+            completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de
+            la persona es menor que <br>
+            18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre
+            completo] usted es menor de edad, por lo tanto, no puede <br>
+            entrar a la fiesta, por favor <br>
+            devuélvase a su casa.</h2>
+        <pre>
+            <code class="language-css" >
+                Proceso Ejercicio3
+	
+                Definir nombre Como Caracter;
+                Definir apellido Como Caracter;
+                definir edad Como Entero;
+                
+                Escribir "Digita tu nombre";
+                Leer nombre;
+                Escribir "Digita tu apellido";
+                Leer apellido;
+                Escribir "¿Cúantos años tienes?";
+                Leer edad;
+                
+                Limpiar Pantalla;
+                
+                Si edad >= 18 Entonces
+                    Escribir "Hola", " ", nombre, " ", apellido, " ", "Usted es mayor de edad, por lo tanto puede entrar a la fiesta";
+                    
+                SiNo
+                    Escribir "Hola", " ", nombre, " ", apellido, " ", "Usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa";
+                FinSi
+                
+            FinProceso
+            </code>
+        </pre>
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el <br>
+            Porvenir, requiere de una aplicación que permita registrar el alquiler de las
+            películas que <br>
+            adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar
+            película, consultar películas disponibles y recibir película en la video <br>
+            tienda con la opción de
+            realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h2>
+        <pre>
+            <code class="language-css" >
+                Proceso videoTienda
+	
+                Escribir "!Bienvenido a su video tienda el porvenir¡";
+                
+                Definir pelicula Como Entero;
+                Definir cantidad Como Entero;
+                Definir verCatalogo Como Entero;
+                Definir animes Como Caracter;
+                Definir accion Como Caracter;
+                Definir terror Como Caracter;
+                Definir aventura Como Caracter;
+                Definir precio Como Real;
+                Definir toltal Como Real;
+                Definir nombreU Como Caracter;
+                Definir celular Como Caracter;
+                Definir opcion Como Entero;
+                Definir n Como Logico;
+                Definir quejas Como Caracter;
+                Definir sinNovedad Como Caracter;
+                
+                pelicula <- 0;
+                precio <- 0;
+                
+                Escribir "Ingresa nombre de usuario";
+                Leer nombreU;
+                
+                Escribir "Hola", " ", nombreU, " ", "Bienvenido ";
+                Escribir " 1.Ver catalogo";
+                Leer verCatalogo;
+                Escribir "<======================================================>";
+                Escribir "            Video tienda el porvenir                   ";
+                Escribir "<======================================================>";
+                Escribir "                 Categorias                             ";
+                Escribir "<======================================================>";
+                Escribir "                  Animes                                ";
+                Escribir "<=======================================================";
+                Escribir " 1:Naruto shippuden             |       precio: 8000$    ";
+                Escribir " 2:Dragon ball z                |       precio: 5000$    ";
+                Escribir " 3:Los siete pecados capitales  |       precio: 5000$    ";
+                Escribir " 4:Castlevania                  |       precio: 5000$    ";
+                Escribir " 5:Titanes del pacifico         |       precio: 5000$    ";
+                Leer animes;
+                
+                Escribir "<======================================================>";
+                Escribir "                  Accion                                ";
+                Escribir "<=======================================================";
+                Escribir " 1:Rapido y firiosos            |       precio: 8000$    ";
+                Escribir " 2:Vikings                      |       precio: 5000$    ";
+                Escribir " 3:Asesino sin memoria          |       precio: 5000$    ";
+                Escribir " 4:Venganza brutal              |       precio: 5000$    ";
+                Escribir " 5:Ciudad perdida               |       precio: 5000$    ";
+                Leer accion;
+                
+                Escribir "<======================================================>";
+                Escribir "                  Terror                                ";
+                Escribir "<=======================================================";
+                Escribir " 1:Dracula                      |       precio: 8000$    ";
+                Escribir " 2:Destino final                |       precio: 5000$    ";
+                Escribir " 3:El aro                       |       precio: 5000$    ";
+                Escribir " 4:Constantine                  |       precio: 5000$    ";
+                Escribir " 5:Fear of the dark             |       precio: 5000$    ";
+                Leer terror;
+                
+                Escribir "<======================================================>";
+                Escribir "                  Aventura                                ";
+                Escribir "<=======================================================";
+                Escribir " 1:Tontos y mas tontos          |       precio: 8000$    ";
+                Escribir " 2:Son como niños               |       precio: 5000$    ";
+                Escribir " 3:Una niñera en apuros         |       precio: 5000$    ";
+                Escribir " 4:Todo poderoso                |       precio: 5000$    ";
+                Escribir " 5:La montaña de hielo          |       precio: 5000$    ";
+                Leer aventura;
+                
+                Limpiar Pantalla;
+                
+                
+                
+                Repetir
+                    
+                    Escribir "¿Que categoria le gustaria ver?";
+                    Escribir "1.Animes";
+                    Escribir "2.Accion";
+                    Escribir "3.Terror";
+                    Escribir "4.Aventura";
+                    Leer opcion;
+                    
+                    Segun opcion Hacer
+                        
+                        1:
+                            Escribir "¿Cual pelicula desea alquilar?";
+                            Escribir "<======================================================>";
+                            Escribir "                  Animes                                ";
+                            Escribir "<=======================================================";
+                            Escribir " 1:Naruto shippuden             |       precio: 8000$    ";
+                            Escribir " 2:Dragon ball z                |       precio: 8000$    ";
+                            Escribir " 3:Los siete pecados capitales  |       precio: 5000$    ";
+                            Escribir " 4:Castlevania                  |       precio: 5000$    ";
+                            Escribir " 5:Titanes del pacifico         |       precio: 5000$    ";
+                            Escribir "Digita el numero según la pelicula que desee";
+                            Leer pelicula;
+            
+                            Si pelicula == 1 Entonces
+                                Escribir "acabas de alquilar "," ","Naruto shippuden" ;
+                                precio <- 8000;
+                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                            SiNo
+                                
+                                si pelicula == 2 Entonces
+                                    Escribir "acabas de alquilar "," ", "Dragon ball z";
+                                    precio <- 8000;
+                                    Escribir "con un valor de :", " ", precio, "$Pesos";
+                                SiNo
+                                    si pelicula == 3 Entonces
+                                        Escribir "acabas de alquilar "," ", "Los siete pecados capitales";
+                                        precio <- 5000;
+                                        Escribir "con un valor de :", " ", precio, "$Pesos";
+                                    SiNo
+                                        
+                                        si pelicula == 4 Entonces
+                                            Escribir "acabas de alquilar "," ", "Castlevania";
+                                            precio <- 5000;
+                                            Escribir "con un valor de :", " ", precio, "$Pesos";
+                                        SiNo
+                                            
+                                            si pelicula == 5 Entonces
+                                                Escribir "acabas de alquilar "," ", "Titanes del pacifico";
+                                                precio <- 5000;
+                                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                                                
+                                            SiNo
+                                                Escribir "opcion no registrada, porfavor elija otra opcion";
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                        2:
+                            Escribir "¿Cual pelicula desea alquilar?";
+                            Escribir "<======================================================>";
+                            Escribir "                  Accion                                ";
+                            Escribir "<=======================================================";
+                            Escribir " 1:Rapido y firiosos            |       precio: 8000$    ";
+                            Escribir " 2:Vikings                      |       precio: 8000$    ";
+                            Escribir " 3:Asesino sin memoria          |       precio: 5000$    ";
+                            Escribir " 4:Venganza brutal              |       precio: 5000$    ";
+                            Escribir " 5:Ciudad perdida               |       precio: 5000$    ";
+                            Escribir "Digita el numero según la pelicula que desee";
+                            Leer pelicula;
+                            
+                            Si pelicula == 1 Entonces
+                                Escribir "acabas de alquilar "," ","Rapido y firiosos" ;
+                                precio <- 8000;
+                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                            SiNo
+                                
+                                si pelicula == 2 Entonces
+                                    Escribir "acabas de alquilar "," ", "Vikings";
+                                    precio <- 8000;
+                                    Escribir "con un valor de :", " ", precio, "$Pesos";
+                                SiNo
+                                    si pelicula == 3 Entonces
+                                        Escribir "acabas de alquilar "," ", "Asesino sin memoria";
+                                        precio <- 5000;
+                                        Escribir "con un valor de :", " ", precio, "$Pesos";
+                                    SiNo
+                                        
+                                        si pelicula == 4 Entonces
+                                            Escribir "acabas de alquilar "," ", "Venganza brutal";
+                                            precio <- 5000;
+                                            Escribir "con un valor de :", " ", precio, "$Pesos";
+                                        SiNo
+                                            
+                                            si pelicula == 5 Entonces
+                                                Escribir "acabas de alquilar "," ", "Ciudad perdida";
+                                                precio <- 5000;
+                                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                                                
+                                            SiNo
+                                                Escribir "opcion no registrada, porfavor elija otra opcion";
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                            
+                        3:
+                            Escribir "¿Cual pelicula desea alquilar?";
+                            Escribir "<======================================================>";
+                            Escribir "                  Terror                                ";
+                            Escribir "<=======================================================";
+                            Escribir " 1:Dracula                      |       precio: 8000$    ";
+                            Escribir " 2:Destino final                |       precio: 8000$    ";
+                            Escribir " 3:El aro                       |       precio: 5000$    ";
+                            Escribir " 4:Constantine                  |       precio: 5000$    ";
+                            Escribir " 5:Fear of the dark             |       precio: 5000$    ";
+                            Escribir "Digita el numero según la pelicula que desee";
+                            Leer pelicula;
+                            
+                            Si pelicula == 1 Entonces
+                                Escribir "acabas de alquilar "," ","Dracula" ;
+                                precio <- 8000;
+                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                            SiNo
+                                
+                                si pelicula == 2 Entonces
+                                    Escribir "acabas de alquilar "," ", "Destino final";
+                                    precio <- 8000;
+                                    Escribir "con un valor de :", " ", precio, "$Pesos";
+                                SiNo
+                                    si pelicula == 3 Entonces
+                                        Escribir "acabas de alquilar "," ", "El aro";
+                                        precio <- 5000;
+                                        Escribir "con un valor de :", " ", precio, "$Pesos";
+                                    SiNo
+                                        
+                                        si pelicula == 4 Entonces
+                                            Escribir "acabas de alquilar "," ", "Constantine";
+                                            precio <- 5000;
+                                            Escribir "con un valor de :", " ", precio, "$Pesos";
+                                        SiNo
+                                            
+                                            si pelicula == 5 Entonces
+                                                Escribir "acabas de alquilar "," ", "Fear of the dark";
+                                                precio <- 5000;
+                                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                                                
+                                            SiNo
+                                                Escribir "opcion no registrada, porfavor elija otra opcion";
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                            
+                        4:
+                            Escribir "¿Cual pelicula desea alquilar?";
+                            Escribir "<======================================================>";
+                            Escribir "                  Aventura                                ";
+                            Escribir "<=======================================================";
+                            Escribir " 1:Tontos y mas tontos          |       precio: 8000$    ";
+                            Escribir " 2:Son como niños               |       precio: 8000$    ";
+                            Escribir " 3:Una niñera en apuros         |       precio: 5000$    ";
+                            Escribir " 4:Todo poderoso                |       precio: 5000$    ";
+                            Escribir " 5:La montaña de hielo          |       precio: 5000$    ";
+                            Escribir "Digita el numero según la pelicula que desee";
+                            Leer pelicula;
+                            
+                            Si pelicula == 1 Entonces
+                                Escribir "acabas de alquilar "," ","Tontos y mas tonto" ;
+                                precio <- 8000;
+                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                            SiNo
+                                
+                                si pelicula == 2 Entonces
+                                    Escribir "acabas de alquilar "," ", "Son como niños";
+                                    precio <- 8000;
+                                    Escribir "con un valor de :", " ", precio, "$Pesos";
+                                SiNo
+                                    si pelicula == 3 Entonces
+                                        Escribir "acabas de alquilar "," ", "Una niñera en apuros";
+                                        precio <- 5000;
+                                        Escribir "con un valor de :", " ", precio, "$Pesos";
+                                    SiNo
+                                        
+                                        si pelicula == 4 Entonces
+                                            Escribir "acabas de alquilar "," ", "Todo poderoso";
+                                            precio <- 5000;
+                                            Escribir "con un valor de :", " ", precio, "$Pesos";
+                                        SiNo
+                                            
+                                            si pelicula == 5 Entonces
+                                                Escribir "acabas de alquilar "," ", "La montaña de hielo ";
+                                                precio <- 5000;
+                                                Escribir "con un valor de :", " ", precio, "$Pesos";
+                                                
+                                            SiNo
+                                                Escribir "opcion no registrada, porfavor elija otra opcion";
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                    FinSegun
+                    Escribir "        ";
+                    Escribir "Si tienes alguna queja, u observación con el servicio por favor has no lo saber en este espacio:";
+                    Leer quejas;
+                    Escribir "     ";
+                    
+                    Escribir "SU novedad a sido registrada, trataremos de darle solucion lo mas pronto: ", " ", quejas;
+                    Escribir " ";
+                    Escribir "¿Desea continura?, digita derdadero o falso para salir:";
+                    Leer n;
+                Hasta Que n == Falso
+                
+                
+                
+                
+                
+            FinProceso
+            
+            </code>
+        </pre>
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para  <br>
+            poder facturar los productos que vende a sus clientes y para ello, los
+            productos tienen unas <br>
+            características que deben indicársele al cliente para que pueda escoger el producto a
+            comprar. Para cada cliente, se tienen las opciones de compra de <br>
+            producto, consulta de precios
+            por producto y devoluciones en caso de que se presenten.</h2>
+        <pre>
+            <code class="language-css" >
+                Proceso Drogueria
+	Definir produc Como Caracter;
+	Definir producto Como Caracter;
+	Definir producto1 Como Caracter;
+	Definir producto2 Como Caracter;
+	Definir productoDev Como Caracter;
+	Definir precio Como Entero;
+	Definir precioDev Como Entero;
+	Definir caracteristicaProduc Como Entero;
+	Definir cantidad Como Entero;
+	Definir cantidadDev Como Entero;
+	Definir contadorCant Como Entero;
+	definir pedidos Como Entero;
+	Definir contadorPrecio Como Entero;
+	Definir opcion Como Entero;
+	Definir continuarCompra Como Logico;
+	Definir contSumaCompra Como Entero;
+	
+	contadorCant <- 0;
+	contadorPrecio <- 0;
+	Escribir "                                            ";
+	Escribir " <------------------Drogueria Mi Salud--------------------------->";
+	Escribir "                                            ";
+	
+	Escribir "Elija la opcion que corresponde en el menú";
+	Escribir "  Consultar precios y productos ";
+	Escribir "  Caracteristicas de los productos ";
+	
+		
+			Escribir "<--------------Bienvenido a su drogueria Mi salud---------------->";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "1. Pastillas dolex           |        500$       |            5000$";
+			Escribir "<---------------------------------------------------------------->";
+			Escribir "Caracteristicas";
+			Escribir " Pastillas dolex";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "2. Advil                     |        900$       |            8000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir " Pastillas Advil";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "3. Aspirina                  |       1000$       |           10000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir " Pastillas Aspirina";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "4  Omeprasol                 |        800$       |            6000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir " Pastillas Omeprasol";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "5. Insulina                  |       6500$       |           35000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir " Insulina";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "6. Jeringa                   |       2500$       |           15000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir "Jeringas";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "7. Salbutamol                |      25500$       |           25500$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir "Salbutamol";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "8. Amlodipina                |      15500$       |          155000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir "Amlodipina";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "9. Oftalmicas                |      33500$       |          335000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir "Oftalmicas";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "    Lista Productos          |  Valor Unidad     |   Valor Cantidad ";
+			Escribir "10.Alcohol                   |      11500$       |          115000$";
+			Escribir "<------------------------------------------------------------------>";
+			Escribir "Caracteristicas";
+			Escribir "Alcohol";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general";
+			Escribir "     ";
+			Leer produc;
+			Escribir "<------------------------------------------------------------------>";
+			
+			
+			
+			Escribir "                              ";
+			
+			Escribir " Pastillas Advil";
+			Escribir " Este medicamento actúa despues de 10 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y dolor en general no produce efectos secundarios";
+			
+			Escribir "                              ";
+			
+			Escribir " Aspirina";
+			Escribir " Este medicamento actúa despues de 25 minutos de usarlo";
+			Escribir " sirve para el dolor de cabeza y la gripe";
+			
+			Escribir "                              ";
+			
+			Escribir " Omeprasol";
+			Escribir " Este medicamento actúa despues de 20 minutos de usarlo";
+			Escribir " controla la acidez estomacal, ardor de estomago";
+			
+			Escribir "                              ";
+			
+			Escribir " Insulina";
+			Escribir " Este medicamento actúa despues de 15 minutos de usarlo";
+			Escribir " se uiliza para remplazar la insulina que produce normal mentte el cuerpo";
+			
+			Escribir "                              ";
+			
+			Escribir " Jeringas";
+			Escribir " Manejamos tres presentaciones de jeringas";
+			Escribir " Permite la inyeccion de medicamentos por via intravenosa";
+			
+			Escribir "                              ";
+			
+			Escribir " Salbutamol";
+			Escribir " Este medicamento actúa despues de 5 minutos despues de usarlo";
+			Escribir " Produce alivio de un ataque de asma al relajar musculos";
+			
+			Escribir "                              ";
+			
+			Escribir " Amlodipina";
+			Escribir " Este medicamento actúa despues de 1 hora despues de usarlo";
+			Escribir " reduce la presion arterial, controla el dolor en el pecho";
+			
+			Escribir "                              ";
+			
+			Escribir " Oftalmicas";
+			Escribir " Este medicamento actúa despues de inmediato despues de usarlo";
+			Escribir " reduce la irritacion, enrojecimiento, infeccion de ojos";
+			
+			Escribir "                              ";
+			
+			Escribir " Alcohol";
+			Escribir " Este medicamento actúa despues de inmediato";
+			Escribir " Se utiliza para desinfectar heridas leves y graves";
+			
+			Escribir " ";
+			
+			Repetir
+				Escribir "Elija una opcion";
+				Escribir " 1. Pedido del producto";
+				Escribir " 2. Devoluciones ";
+				Leer  opcion;
+				
+				Segun opcion Hacer
+					1:
+						
+						Escribir "¿cuál es el producto que desea?";
+						Leer producto;
+						Escribir "Cuál es la cantidad?";
+						Leer cantidad;
+						cantidad <- cantidad + contadorCant;
+						contadorCant <- contadorCant + 1;
+						
+						precio <- 500;
+						Escribir "    ";
+						Escribir "usted a comprado", " ", cantidad," ", "de", " ", producto, "total apagar es:", " ",precio;
+						
+					2:
+						Escribir "¿Que producto desea devolver?";
+						Leer productoDev;
+						Escribir "precio unidad";
+						Leer precio;
+						Escribir "¿Cuanto es la cantidad de la devolucion?";
+						Leer cantidadDev;
+						precioDev <- precio * cantidadDev;
+						Escribir "Devolucion completada, su saldo a favor es de:", " ", precioDev;
+								
+				FinSegun
+				
+				Escribir "¿Desea realizar otra compra? si es esi digita verdadero, si no digita falso";
+				Leer continuarCompra;
+				
+			Hasta Que continuarCompra == Falso
+			
+FinProceso
+
+            </code>
+        </pre>
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las <br>
+            respectivas revisiones y requiere una aplicación que le permita registrar los
+            servicios generados a <br>
+            sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones <br>
+            por parte del cliente. También debe existir registro de
+            salida del taller con las novedades y otra <br>
+            de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en <br>
+            la motocicleta al entregarla.</h2>
+
+        <pre>
+            <code class="language-css">
+                Proceso tallerMotos
+	
+	Definir placa Como Caracter;
+	Definir fechaIngreso Como Caracter;
+	Definir fechaSalida Como Caracter;
+	Definir nombreU Como Caracter;
+	Definir observacionCliente Como Caracter;
+	Definir novedadesMecanico Como Caracter;
+	Definir arregloMecanico Como Caracter;
+	Definir registroEntrada Como Caracter;
+	Definir registroSalida Como Caracter;
+	Definir cilindraje Como Entero;
+	Definir marcaMoto Como Caracter;
+	Definir estadoMoto Como Entero;
+	Definir opcion Como Entero;
+	Definir contMoto Como Entero;
+	Definir contRtrEntrada Como Entero;
+	Definir contRtrSalida Como Entero;
+	Definir estado Como Logico;
+	
+	contRtrEntrada <- 0;
+	contRtrSalida <- 0;
+	contMoto <- 0;
+	
+	Escribir "<-----------------Bienvenido a su taller El maqinista--------------------->";
+	Escribir "¿Cual es su nombre?";
+	Leer nombreU;
+	Escribir "¿Cuál es el cilindraje de la moto?";
+	Leer cilindraje;
+	Si cilindraje >= 400 Entonces
+		Escribir "Señor(a)", " ", nombreU, " ", "¿Que servicio desea?";
+		
+		
+		Repetir
+			
+			Escribir "1.Revision general";
+			Escribir "2.Revision preventiva";
+			Escribir "3.Puesta a punto";
+			Escribir "4.Reparar Motor";
+			Escribir "5.Salir";
+			Leer opcion;
+			
+			Segun opcion Hacer
+				1:
+					Escribir "<---------------Revision general------------------------>";
+					Escribir "<=======================================================>";
+					Escribir "                              Registro Entrada                                      ";
+					Escribir "<=======================================================>";
+					Escribir "Digita placa de la moto";
+					Leer placa;
+					Escribir "Digita la marca";
+					Leer marcaMoto;
+					Escribir "Digita la fecha de ingreso";
+					Leer fechaIngreso;
+					Limpiar Pantalla;
+					Escribir "Digita otras observaciones";
+					Leer observacionCliente;
+					Escribir "Numero de registro:", contRtrEntrada + 1;
+					Escribir "El dia :", " ", fechaIngreso, " " , " se realiza la entrada al taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa, " ", "propietario:", " ", nombreU;
+					Escribir "Observaciones :", " ", observacionCliente;
+					Escribir "La moto esta siendo intervenida por uno de nuestros mecanicos";
+					Escribir "<-------------------------Resultado de la revisión---------->";
+					Escribir "1.Revisión aprovada";
+					Escribir "2.Revisión no aprovada";
+					Leer  estadoMoto;
+					
+					Limpiar Pantalla;
+					
+					
+					segun estadoMoto Hacer
+						1:Escribir "<===================================================================================>";
+							Escribir "                              Registro salida                                       ";
+							Escribir "<===================================================================================>";
+							Escribir "Digita placa de la moto";
+							Leer placa;
+							Escribir "Digita la marca";
+							Leer marcaMoto;
+							Escribir "Digita la fecha de salida";
+							Leer fechaSalida;
+							Escribir "Digita las novedades";
+							Leer novedadesMecanico;
+							Escribir "Numero de registro:", contRtrSalida + 1, " ", "con registro de entrada de: ", " ", fechaIngreso;
+							Escribir "El dia :", " ", fechaSalida, " " , " se realiza la salida del taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa, " ", "propietario"," ", nombreU;
+							Escribir "Donde se registran las sigientes novedades :", " ", novedadesMecanico;
+							
+						2:
+							Escribir "<----------------La moto continua en etapa de distintos fallos---------------->";
+							Escribir "Lo sentimos la moto no cumple con los estandares, se procede a realizar nuevos chequeos";
+							
+					FinSegun
+					
+					Limpiar Pantalla;
+				2:	
+					Escribir "<------------------Revision Preventiva------------------------>";
+					Escribir "Digita placa de la moto";
+					Leer placa;
+					Escribir "Digita la marca";
+					Leer marcaMoto;
+					Escribir "Digita la fecha de ingreso";
+					Leer fechaIngreso;
+					Escribir "Digita otras observaciones";
+					Leer observacionCliente;
+					Escribir "Numero de registro:", contRtrEntrada + 1;
+					Escribir "El dia :", " ", fechaIngreso, " " , " se realiza la entrada al taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa;
+					Escribir "Observaciones :", " ", observacionCliente;
+					Escribir "La moto esta siendo intervenida por uno de nuestros mecanicos";
+					Escribir "<-------------------------Resultado de la revisión---------->";
+					Escribir "1.Revisión aprovada";
+					Escribir "2.Revisión no aprovada";
+					Leer  estadoMoto;
+					
+					Limpiar Pantalla;
+					
+					segun estadoMoto Hacer
+						1:Escribir "<===================================================================================>";
+							Escribir "                              Registro salida                                      ";
+							Escribir "<=================================================================================>";
+							Escribir "Digita placa de la moto";
+							Leer placa;
+							Escribir "Digita la marca";
+							Leer marcaMoto;
+							Escribir "Digita la fecha de salida";
+							Leer fechaSalida;
+							Escribir "Digita las novedades";
+							Leer novedadesMecanico;
+							Escribir "Numero de registro:", contRtrSalida + 1, " ", "con registro de entrada de: ", " ", fechaIngreso;
+							Escribir "El dia :", " ", fechaSalida, " " , " se realiza la salida del taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa, " ", "propietario"," ", nombreU;
+							Escribir "Donde se registran las sigientes novedades :", " ", novedadesMecanico;
+							
+							Escribir "La revision general consiste en el chequeo de las partes masrelevantes";
+						2:
+							Escribir "<-------La moto continua en etapa de mejoras a los diferentes fallos------>";
+							Escribir "Lo sentimos la moto no cumple con los estandares, se procede a realizar nuevos chequeos";
+							
+					FinSegun
+					
+					Limpiar Pantalla;
+				3:
+					Escribir "<------------------Puesta a punto------------------------>";
+					Escribir "Digita placa de la moto";
+					Leer placa;
+					Escribir "Digita la marca";
+					Leer marcaMoto;
+					Escribir "Digita la fecha de ingreso";
+					Leer fechaIngreso;
+					Escribir "Digita otras observaciones";
+					Leer observacionCliente;
+					Escribir "Numero de registro:", contRtrEntrada + 1;
+					Escribir "El dia :", " ", fechaIngreso, " " , " se realiza la entrada al taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa;
+					Escribir "Observaciones :", " ", observacionCliente;
+					Escribir "La moto esta siendo intervenida por uno de nuestros mecanicos";
+					Escribir "<-------------------------Resultado de la revisión---------->";
+					Escribir "1.Revisión aprovada";
+					Escribir "2.Revisión no aprovada";
+					Leer  estadoMoto;
+					
+					Limpiar Pantalla;
+					
+					segun estadoMoto Hacer
+						1:Escribir "<===================================================================================>";
+							Escribir "                              Registro salida                                      ";
+							Escribir "<=================================================================================>";
+							Escribir "Digita placa de la moto";
+							Leer placa;
+							Escribir "Digita la marca";
+							Leer marcaMoto;
+							Escribir "Digita la fecha de salida";
+							Leer fechaSalida;
+							Escribir "Digita las novedades";
+							Leer novedadesMecanico;
+							Escribir "Numero de registro:", contRtrSalida + 1, " ", "con registro de entrada de: ", " ", fechaIngreso;
+							Escribir "El dia :", " ", fechaSalida, " " , " se realiza la salida del taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa, " ", "propietario"," ", nombreU;
+							Escribir "Donde se registran las sigientes novedades :", " ", novedadesMecanico;
+							
+							Escribir "La revision general consiste en el chequeo de las partes masrelevantes";
+						2:
+							fechaSalida <- fechaIngreso;
+							Escribir "<-------La moto continua en etapa de mejoras a los diferentes fallos------>";
+							Escribir "Lo sentimos la moto no cumple con los estandares, se procede a realizar nuevos chequeos";
+							
+					FinSegun
+
+					
+					Limpiar Pantalla;
+					
+				4:
+					Escribir "<------------------Reparada Motor------------------------>";
+					Escribir "Digita placa de la moto";
+					Leer placa;
+					Escribir "Digita la marca";
+					Leer marcaMoto;
+					Escribir "Digita la fecha de ingreso";
+					Leer fechaIngreso;
+					Escribir "Digita otras observaciones";
+					Leer observacionCliente;
+					Escribir "Numero de registro:", contRtrEntrada + 1;
+					Escribir "El dia :", " ", fechaIngreso, " " , " se realiza la entrada al taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa;
+					Escribir "Observaciones :", " ", observacionCliente;
+					Escribir "La moto esta siendo intervenida por uno de nuestros mecanicos";
+					Escribir "<-------------------------Resultado de la puesta a punto---------->";
+					Escribir "1.Revisión aprovada";
+					Escribir "2.Revisión no aprovada";
+					Leer  estadoMoto;
+					
+					Limpiar Pantalla;
+					
+					segun estadoMoto Hacer
+						1:Escribir "<===================================================================================>";
+							Escribir "                              Registro salida                                      ";
+							Escribir "<=================================================================================>";
+							Escribir "Digita placa de la moto";
+							Leer placa;
+							Escribir "Digita la marca";
+							Leer marcaMoto;
+							Escribir "Digita la fecha de salida";
+							Leer fechaSalida;
+							Escribir "Digita las novedades";
+							Leer novedadesMecanico;
+							Escribir "<---------------------------------------------------------------------------------->";
+							Escribir "Numero de registro:", contRtrSalida + 1, " ", "con registro de entrada de: ", " ", fechaIngreso;
+							Escribir "El dia :", " ", fechaSalida, " " , " se realiza la salida del taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa, " ", "propietario"," ", nombreU;
+							Escribir "Donde se registran las sigientes novedades :", " ", novedadesMecanico;
+							
+							Escribir "La revision general consiste en el chequeo de las partes masrelevantes";
+						2:
+							Escribir "                              Registro no aprovado                                      ";
+							Escribir "<=================================================================================>";
+							Escribir "<-------La moto continua en etapa de mejoras a los diferentes fallos------>";
+							Escribir "Lo sentimos la moto no cumple con los estandares, se procede a realizar nuevos chequeos";
+							
+					FinSegun
+					
+					Limpiar Pantalla;
+							
+			FinSegun
+			Escribir "<===========================================================================================>";
+			Escribir "Numero de registro:", contRtrSalida + 1, " ", "con registro de entrada de: ", " ", fechaIngreso;
+			Escribir "El dia :", " ", " " , " se realiza la salida del taller de la moto :", " ", marcaMoto, " ", "con placas", " ", placa, " ", "propietario"," ", nombreU;
+			Escribir "Donde se registran las sigientes novedades :", " ";
+			Escribir "                              Registro no aprovado                                      ";
+			Escribir "<=================================================================================>";
+			Escribir "<-------La moto continua en etapa de mejoras a los diferentes fallos------>";
+			Escribir "Lo sentimos la moto no cumple con los estandares, se procede a realizar nuevos chequeos";
+			Escribir "<============================================================================================>";
+			Escribir "                           ";
+			Escribir "¿Desea continuar?, digite verdadero si su respuesta es si, si no digite Falso";
+			Leer estado;
+		Hasta Que estado == Falso 
+	SiNo
+		Escribir "Lo sentimos el cilindraje no es el esperado, por favor visita otro punto de atencion";
+	FinSi
+	
+FinProceso
+
+            </code>
+        </pre>    
+
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC <br>
+            (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en
+            metros Para <br>
+            cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para <br>
+            cada uno y establecer en qué rango se encuentra (bajo peso, normal,
+            sobrepeso y obeso).</h2>
+
+        <pre>
+            <code class="language-css">
+                Proceso IMC
+	
+                Definir peso Como Real;
+                Definir estatura Como Real;
+                Definir nombre Como Caracter;
+                Definir rango Como Real;
+                Definir bajoPeso Como Caracter;
+                Definir normalPeso Como Caracter;
+                Definir sobrepeso Como Caracter;
+                Definir  obeso Como Caracter;
+                
+                Escribir " <---Bienvenido secretaria de salu municipal----> ";
+                Escribir "     Herramienta para calcular el IMC(Indice Masa Corporal)   ";
+                Escribir " Digita tu nombre completo ";
+                Leer nombre;
+                Escribir " Ingresa tu peso actual ";
+                Leer peso;
+                Escribir " Ingresa tu estatura ";
+                Leer  estatura;
+                
+                rango <- peso / estatura ^2;
+                
+                Si rango < 18.5 Entonces
+                    Escribir " Estimado ", " ", nombre, " ", " te encuentras bajo de peso, por favor consulta con un dietista ";
+                    Leer bajoPeso;
+                    
+                    Escribir " Volver al menu de inicio";
+                    Limpiar Pantalla;
+                    
+                    Escribir " <---Bienvenido secretaria de salu municipal----> ";
+                    Escribir "     Herramienta para calcular el IMC(Indice Masa Corporal)   ";
+                    Escribir " Digita tu nombre completo ";
+                    
+                SiNo
+                    Si rango >= 18.5 Y rango <= 24.9 Entonces
+                        Escribir " Estimado ", " ", nombre, " ", " te invitamos a continuar con tu dieta, tienes en un peso normal ";
+                        Leer normalPeso;
+                        
+                        Escribir " Volver al menu de inicio";
+                        Limpiar Pantalla;
+                        
+                        Escribir " <---Bienvenido secretaria de salu municipal----> ";
+                        Escribir "     Herramienta para calcular el IMC(Indice Masa Corporal)   ";
+                        Escribir " Digita tu nombre completo ";
+                        
+                    SiNo
+                        Si rango >= 25.0 Y rango <= 29.9 Entonces
+                            Escribir  " Estimado ", " ", nombre, " ", " Cuidado estas en alerta nivel  es sobrepeso ";
+                            Leer sobrepeso;
+                            
+                            Escribir " Volver al menu de inicio";
+                            Limpiar Pantalla;
+                            
+                            Escribir " <---Bienvenido secretaria de salu municipal----> ";
+                            Escribir "     Herramienta para calcular el IMC(Indice Masa Corporal)   ";
+                            Escribir " Digita tu nombre completo ";
+                            
+                        SiNo
+                            Si rango <= 30.0 Entonces
+                                
+                                Escribir  " Estimado ", " ", nombre, " ", " Alerta roja usted esta en nivel de obesidad ";
+                                
+                                Leer obeso; 
+                                
+                                Escribir " Volver al menu de inicio";
+                                Limpiar Pantalla;
+                                
+                                Escribir " <---Bienvenido secretaria de salu municipal----> ";
+                                Escribir "     Herramienta para calcular el IMC(Indice Masa Corporal)   ";
+                                Escribir " Digita tu nombre completo ";
+                            FinSi
+                        FinSi
+                        
+                    FinSi
+                FinSi
+                
+                
+                
+            FinProceso
+
+            </code>
+        </pre>    
+
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le <br>
+            permita registrar los pedidos de los clientes en cuanto a las tortas que realiza.
+            Cada torta tiene <br>
+            unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que <br>
+            la aplicación permita registrar los pedidos, las tortas disponibles
+            y las ventas que se registren
+            diariamente.</h2>
+
+        <pre>
+            <code class="language-css">
+                Proceso sin_titulo
+                Definir  maxPedidos Como Entero;
+                maxPedidos <- 3;
+                Definir nombreUsuario Como Caracter;
+                Definir nombreTorta Como Caracter;
+                Definir respuesta Como Caracter;
+                Definir torta Como Entero;
+                Definir torta1 Como Entero;
+                Definir torta2 Como Entero;
+                Definir tortaP Como Entero;
+                Definir torta1P Como Entero;
+                Definir torta2P Como Entero;
+                Definir tortaD Como Entero;
+                Definir torta1D Como Entero;
+                Definir torta2D Como Entero;
+                Definir menu Como Entero;
+                Definir menuR Como Logico;
+                Definir caracteristicas Como Entero;
+                Definir sabor Como Caracter;
+                Definir porciones Como Entero;
+                Definir decoracion Como Caracter;
+                Definir sabor1 Como Caracter;
+                Definir porciones1 Como Entero;
+                Definir decoracion1 Como Caracter;
+                Definir sabor2 Como Caracter;
+                Definir porciones2 Como Entero;
+                Definir decoracion2 Como Caracter;
+                Definir opcion Como Entero;
+                Definir cantidad Como Entero;
+                Definir cantidad1 Como Entero;
+                Definir cantidad2 Como Entero;
+                Definir cantidadDis Como Entero;
+                Definir cantidad1Dis Como Entero;
+                Definir cantidad2Dis Como Entero;
+                Definir t1 Como Entero;
+                Definir t2 Como Entero;
+                Definir t3 Como Entero;
+                Definir pedido Como Entero;
+                Definir precio Como Entero;
+                
+                cantidadDis <- 0;
+                cantidad1Dis <- 0;
+                cantidad2Dis <- 0;
+                
+                t1 <- 1;
+                t2 <- 2;
+                t3 <- 3;
+                
+                
+                
+                
+                Escribir " <============Bienvenidos a su Panaderia Don Carlos==================> ";
+                Escribir "                ";
+                Escribir "<=====================================================================>";
+                Escribir "Digita tu nombre completo";
+                Leer nombreUsuario;
+                
+                Escribir "<=====================================================================>";
+                Escribir " Hola ", " ", nombreUsuario, " ", " es un placer atenderte";
+                Escribir " revisa los servicios que te podemos brindar";
+                escribir "                      ";
+                Escribir "<======================================================================>";
+                Escribir "      Listado de tortas          ";
+                Escribir "<=====================================================================>";
+                Escribir "1. Torta de cerezas ";
+                Leer torta;
+                Escribir "<----------------------------Caracteristicas-------------------------->";
+                Escribir " La torta de cerezas, tiene un sabor agriduce que combina con la crema de nieve por fuera";
+                Escribir " La cantidad de esta delisiosa torta es de 10 porciones";
+                Escribir " La torta tiene dos formas de decorado en para cumpleaños, de bodas ";
+                Escribir "                      ";
+                Escribir "<=====================================================================>";
+                Escribir "2. Torta de chocolate ";
+                Leer torta1;
+                Escribir "<----------------------------Caracteristicas-------------------------->";
+                Escribir "La torta de chocolate, tiene la combinacion de cholate con fresas que le da un sabor natural";
+                Escribir " La cantidad de esta delisiosa torta es de 10 porciones";
+                Escribir " La torta tiene dos formas de decorado en para cumpleaños, de bodas ";
+                Escribir "                      ";
+                Escribir "<=====================================================================>";
+                Escribir "3. Torta de Vainilla ";
+                Leer torta2;
+                Escribir "<----------------------------Caracteristicas-------------------------->";
+                Escribir "La torta de Vainilla, da la experiencia de disfrutar el sabor de arequipe mas leche condensada, sin ser hostigante";
+                Escribir " La cantidad de esta delisiosa torta es de 12 porciones";
+                Escribir " La torta tiene tres formas de decorado en para cumpleaños, de bodas y diseño cakes ";
+                
+                Escribir "      ";
+                
+                Escribir "<=====================================================================>";
+                Escribir "                       Inicio                                          ";
+                Escribir "<=====================================================================>";
+                Escribir "                ";
+                Escribir "Selecciona la opcion que guste en el menú";
+                Escribir "                ";
+                
+                
+                Repetir
+                Escribir " 1. Realizar pedidos ";
+                Escribir " 2. Tortas disponibles";
+                Escribir " 3. Realizar venta ";
+                Leer menu;
+                torta <- 5;
+                torta1 <- 5;
+                torta2 <- 5;
+                tortaD <- torta + torta1 + torta2;
+                
+                    Segun menu Hacer
+                        1:
+                            Escribir "¿Que sabor te gusto?";
+                            Escribir " 1. Torta de cerezas ";
+                            Escribir " 2. Torta de chocolate ";
+                            Escribir " 3. Torta de Vainilla ";
+                            Leer opcion;
+                            
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Escribir "¿Cuantas unidades desea?";
+                                    Leer cantidad;
+                                    Escribir "Pedido exitoso";
+                                    cantidadDis <- torta - cantidad;
+                                    
+                                2:
+                                    Escribir "¿Cuantas unidades desea?";
+                                    Leer cantidad;
+                                    Escribir "Pedido exitoso";
+                                    cantidad1Dis <- torta1 - cantidad;
+                                    
+                                    
+                                    
+                                3:
+                                    Escribir "¿Cuantas unidades desea?";
+                                    Leer cantidad;
+                                    Escribir "Pedido exitoso";
+                                    cantidad2Dis <- torta2 - cantidad;
+                                    Leer cantidad2Dis;
+                                    
+                                De Otro Modo:
+                                    Escribir "Obsion no valida";
+                            FinSegun
+                            Leer cantidadDis;
+                            
+                            
+                            
+                        2:
+                            Escribir "Las tortas disponibles son:";
+                            Escribir cantidadDis;
+                            Escribir cantidad1Dis;
+                            Escribir cantidad2Dis;
+                            
+                            
+                        3:
+                            Escribir "Digita el nombre de la torta que desea";
+                            Leer nombreTorta;
+                            precio <- 150000;
+                            Escribir "La compra realizada es: ", " ", nombreTorta, " ", "El valor a cancelar es: ", " ", precio;
+                            
+                    FinSegun
+                    Escribir "Desea continuar?: marque verdadero para continuar o falso para salir";
+                    Leer menuR;
+                Hasta Que menuR == Falso
+                
+                
+            FinProceso
+            
+            </code>
+        </pre>    
+
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de <br>
+            diferentes figuras geométricas, para ello requiere una aplicación que le
+            facilite el ejercicio <br>
+            solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si <br>
+            desea calcular el área de un rectángulo, triángulo o
+            trapecio. No olvide solicitar los datos <br>
+            necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h2>
+
+        <pre>
+            <code class="language-css">
+                Proceso profesorGeometria
+	
+	Definir lado Como Real;
+	Definir ancho Como Real;
+	Definir base Como Real;
+	Definir base1 Como Real;
+	Definir base2 Como Real;
+	Definir altura Como Real;
+	Definir largo Como Real;
+	Definir area Como Real;
+	Definir areaRectangulo Como Real;
+	Definir areaTriangulo Como Real;
+	Definir areaTrapecio Como Real;
+	Definir opcion Como Entero;
+	Definir opcionR Como Logico;
+	
+	//opcionR <- "";
+
+	
+	Escribir "Bienvenido al calculador de areas figuras geometricas";
+	Escribir "¿El area de cuál figura desea calcular?";
+	
+	Repetir
+		Escribir " 1.Rectangulo ";
+		Escribir " 2.Triangulo ";
+		Escribir " 3.Trapecio ";
+		Leer opcion;
+		
+		Segun opcion Hacer
+			1:
+				Escribir "Ingresa el largo del rectangulo a calcular";
+				Leer largo;
+				Escribir "Ingresa el ancho del rectangulo a calcular";
+				Leer ancho;
+				areaRectangulo <- largo * ancho;
+				Escribir "El area del rectangulo es: ", " ", areaRectangulo;
+				
+			2:
+				Escribir "Ingresa la base del triangulo a calcular";
+				Leer base;
+				Escribir "Ingresa la altura del triangulo a calcular";
+				Leer altura;
+				areaTriangulo <- (base * altura) / 2;
+				Escribir "El area del triangulo es: ", " ", areaTriangulo;
+				
+			3:
+				Escribir "Ingresa la primera base del trapecio";
+				Leer base1;
+				Escribir "Ingresa la segunda base del trapecio";
+				Leer base2;
+				Escribir "Ingresa la altura del trapecio";
+				Leer altura;
+				areaTrapecio <- (base1 +  base2 * (altura))/2;
+				Escribir "El area del trapecio es :", " ", areaTrapecio;
+				
+		FinSegun
+		Escribir " ¿Desea continuar en el menú? ingresa verdadero para continuar o falso para salir ";
+		Leer opcionR;
+	
+	Hasta Que opcionR == Falso
+	
+	
+	
+FinProceso
+
+            </code>
+        </pre>    
+
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una <br>
+            aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la
+            cuenta tenga <br>
+            los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros <br>
+            o consultas de valor. En los ingresos no se pueden insertar
+            valores negativos y para los retiros el <br>
+            valor no puede ser mayor al valor que tiene en la cuenta.</h2>
+
+        <pre>
+            <code class="language-css">
+                Proceso Banco
+	
+                Definir titular Como Caracter;
+                Definir usuario Como Caracter;
+                Definir cantidad Como Real;
+                Definir menu Como Entero;
+                Definir opcion Como Entero;
+                Definir cuenta como entero;
+                Definir retiro Como Real;
+                Definir retiroRealizado Como Logico;
+                Definir valorInicial Como Real;
+                Definir nuevoSaldo Como Real;
+                Definir n Como Logico;
+                
+                retiroRealizado <- Falso;
+                retiro <- 0;
+                cantidad <- 0;
+                valorInicial <- 0;
+                nuevoSaldo <- 0;
+                
+                
+                
+                Escribir "           Bienvenido a su Banco fiel         ";
+                Escribir "     ";
+                Escribir "Elija la opcion:";
+                Escribir " 1. ingresar ";
+                Escribir " 2. salir ";
+                Leer menu;
+                
+                Segun menu Hacer
+                    1:
+                        Escribir " Digita el Nombre completo ";
+                        Leer titular;
+                        Escribir  " numero de cuenta";
+                        Leer cuenta;
+                        Escribir " Ingresa la cantidad  ";
+                        Leer valorInicial;
+                        
+                        Limpiar Pantalla;
+                        Escribir " La consignacion a sido exitosa ";
+                        Escribir " Nuevo saldo es de : ", " ", valorInicial, "Pesos";
+                        
+                        si valorInicial >= 1 Entonces
+                            
+                            Repetir
+                                Escribir "elija una opcion";
+                                Escribir " 1.Realizar Ingresos ";
+                                Escribir " 2.Retirar ";
+                                Escribir " 3.Consultar saldo ";
+                                Leer opcion;
+                                
+                                Segun opcion Hacer
+                                    
+                                    1:
+                                        Escribir "Digita la cantidad que vas a ingresar";
+                                        Leer cantidad;
+                                        si cantidad >= 1 Entonces
+                                            Escribir " La consignacion a sido exitosa ";
+                                            valorInicial <- valorInicial + cantidad;
+                                            
+                                        SiNo
+                                            Escribir "El monto no es valido";
+                                        FinSi
+                                        
+                                    2:
+                                        Escribir "Digita la cantidad a retirar";
+                                        Leer retiro;
+                                        si valorInicial >= retiro Entonces
+                                            Escribir "retiro exitoso";
+                                            valorInicial <- valorInicial - retiro;
+                                            retiroRealizado <- Verdadero;
+                                            
+                                        SiNo
+                                            Escribir "Fondos insuficientes";
+                                            
+                                        FinSi
+                                        
+                                    3:
+                                        Si retiroRealizado == Falso Entonces
+                                            Escribir "Su saldo actual es: ", valorInicial,"$";
+                                        SiNo
+                                            si retiroRealizado == verdadero Entonces
+                                                nuevoSaldo <- valorInicial;
+                                                Escribir "Su saldo actual es: ", nuevoSaldo,"$";
+                                            FinSi
+                                        FinSi
+                                        
+                                        
+                                FinSegun
+                                Escribir "Desea continuar? Verdadero para continuar, falso para salir";
+                                Leer n;
+                                
+                            Hasta Que n == Falso
+                            
+                        FinSi
+                        
+                    2:
+                        Escribir " Digita el nombre del titular de la cuenta";
+                        Leer usuario;
+                        
+                    
+                FinSegun
+                
+                
+                
+            FinProceso
+
+            </code>
+        </pre>    
+    </div>
+
+    <h1 class="titulo">Taller de condicionales desarrollo en Java</h1>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o <br>
+            igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio1;
+
+                import java.util.Scanner;
+
+                public class MayorEdad {
+
+                    Scanner lector = new Scanner(System.in);
+
+                    public void evaluarEdad(){
+
+                        int edad;
+
+                        System.out.println("Ingresa tu edad");
+                        edad = lector.nextInt();
+
+                        if(edad >= 18) {
+                            System.out.println("Usted es mayor de edad");
+                        }
+                    }
+                }
+
+                package Ejercicio1;
+
+                public class Main1 {
+
+                    public static void main(String[] args) {
+
+                        MayorEdad mayorEdad = new MayorEdad();
+                        mayorEdad.evaluarEdad();
+                    }
+                }
+            </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 <br>
+            años, deberá mostrar en pantalla: Usted aún es un niño(a).</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio2;
+
+                import java.util.Scanner;
+                
+                public class MenorEdad {
+                
+                    Scanner lector = new Scanner(System.in);
+                
+                    public void evaluarEdad(){
+                
+                        int edad;
+                
+                        System.out.println("Ingresa tu edad");
+                        edad = lector.nextInt();
+                
+                        if(edad < 18) {
+                            System.out.println("Usted aún es un niño(a).");
+                        }
+                    }
+                }
+
+                package Ejercicio2;
+
+                public class Main2 {
+
+                    public static void main(String[] args) {
+                        MenorEdad menorEdad = new MenorEdad();
+                        menorEdad.evaluarEdad();
+                    }
+                }
+            </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la <b></b>
+            persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla
+            [Nombre <br>
+            completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de
+            la persona es menor que <br>
+            18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre
+            completo] usted es menor de edad, por lo tanto, no puede <br>
+            entrar a la fiesta, por favor
+            devuélvase a su casa.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio3;
+
+                import java.util.Scanner;
+                
+                public class IrFiesta {
+                
+                    Scanner lector = new Scanner(System.in);
+                
+                    public void evaluarIngreso(){
+                        String nombre;
+                        String apellido;
+                        int edad;
+                
+                        System.out.println("Digita tu nombre");
+                        nombre = lector.nextLine();
+                        System.out.println("Digita tu apellido");
+                        apellido = lector.nextLine();
+                        System.out.println("Digita tu edad");
+                        edad = lector.nextInt();
+                
+                        if(edad >= 18){
+                            System.out.println("Hola " + nombre + " " + apellido +
+                                    " Usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+                        }else {
+                            System.out.println("Hola " + nombre + " " + apellido +
+                                    " Usted es menor de edad, por lo tanto, no puede entrar a la fiesta," +
+                                    "por favor devúelvase a su casa");
+                        }
+                    }
+                }
+                        package Ejercicio3;
+
+                        public class Main3 {
+
+                            public static void main(String[] args) {
+
+                                IrFiesta irFiesta = new IrFiesta();
+                                irFiesta.evaluarIngreso();
+
+                            }
+                        }
+            </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el <br>
+            Porvenir, requiere de una aplicación que permita registrar el alquiler de las
+            películas que <br>
+            adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar
+            película, consultar películas disponibles y recibir película en la video <br>
+            tienda con la opción de <br>
+            realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio4;
+
+                import java.util.Scanner;
+
+                public class VideoTienda {
+                    Scanner lector = new Scanner(System.in);
+
+                    String nombrePelicula;
+                    int opcion;
+                    String novedades;
+                    String peli;
+
+                    String animes [] = {"1.Naruto", "2.Dragon ball z", "3.Los 7 pecados capitales", "4.Castlevania", "5.Titanes del pacifico"};
+                    String accion [] = {"1.Rapido y furiosos", "2.Vikings", "3.Asesino mortal", "4.Venganza brutal", "5.Ciudad brutal", "Ciudad perdida"};
+                    String terror [] = {"1.Dracula", "2.Destino final", "3.El aro", "4.Constantine", "5.Fear of The dark"};
+                    String aventura [] = {"1.Tontos y mas tontos", "2.Son como niños", "3.Una niñera en apuros", "4.Todo poderoso", "5.La montaña de hielo"};
+                    String peliculasDIsponibles [];
+
+
+
+                    public void mostrarPorGenero(String lista[]){
+
+                        for (int i = 0; i< lista.length; i++){
+                            System.out.println(lista[i]);
+                        }
+                    }
+
+                    public String optenerPeli() {
+
+                        String peli;
+                        peli = "";
+                        String lista[] = new String[5];
+                        int opcion = 0;
+                        for (int i = 1; i < 5; i++) {
+                            if (opcion == i) {
+                                peli = lista[i];
+                                System.out.println(peli);
+                            }
+
+                        }
+                        return peli;
+                    }
+
+
+                    public void mostrarGenero(){
+                        int opcion;
+                            System.out.println("1.Animes");
+                            System.out.println("2.Accion");
+                            System.out.println("3.Terror");
+                            System.out.println("4.Aventura");
+                            System.out.println("5.Salir");
+                    }
+
+                    public int  getPelicula(){
+
+                        int opcionPeli = 0;
+
+                        System.out.println("Ingresa el numero de la pelicula que deseas ver ");
+                        opcionPeli = lector.nextInt();
+
+                        return opcionPeli;
+
+                    }
+                    public String leerUsuario(){
+                        String nombreUsuario = "";
+                        System.out.println("Digita el nombre del usuario");
+                        nombreUsuario = lector.nextLine();
+                        System.out.println(nombreUsuario);
+
+
+                        return nombreUsuario ;
+                    }
+
+                    public void saludarUsuario(String nombre){
+                        System.out.println("Estimado " + nombre + " Bienvenido a su video tienda, disfruta de todos nuestros servicios");
+                    }
+
+
+                    //Metodo que registra alguna anotacion hecha por el cliente
+                    public void registrarAnotacion(String nombre, String nota){
+                        System.out.println("Yo " + nombre + " realizo la suiguiente observación con el fin de que el" +
+                                " servicio mejore " + nota);
+                    }
+
+                }
+
+                package Ejercicio4;
+
+import java.util.Scanner;
+
+public class Main4 {
+
+    public static void main(String[] args) {
+
+
+        Scanner lector = new Scanner(System.in);
+        int opcion = 1;
+        int peliculaAlquilada;
+        String usuario = "";
+        String notacion = "";
+
+        VideoTienda videoTienda = new VideoTienda();
+
+        do {
+            System.out.println("");
+            System.out.println("\tBienvenido a su Video Tienda El Porvenir \n");
+
+            videoTienda.mostrarGenero();
+            System.out.println("Digita una opcion");
+            opcion = lector.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    usuario = videoTienda.leerUsuario();
+                    videoTienda.saludarUsuario(usuario);
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.animes);
+                    peliculaAlquilada = videoTienda.getPelicula();
+
+                    for (int i = 0; i <= 4; i++) {
+                        if (i == peliculaAlquilada) {
+                            videoTienda.animes[i] = "Pelicula no esta disponible";
+
+                        }
+                        System.out.println("");
+                    }
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.animes);
+                    System.out.println("¿Desea registar alguna anotación? ");
+                    videoTienda.registrarAnotacion(usuario, notacion);
+
+                    break;
+
+                case 2:
+                    usuario = videoTienda.leerUsuario();
+                    videoTienda.saludarUsuario(usuario);
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.accion);
+                    peliculaAlquilada = videoTienda.getPelicula();
+
+
+                    for (int i = 0; i <= 4; i++) {
+                        if (i == peliculaAlquilada) {
+                            videoTienda.accion[i] = "Pelicula no esta disponible";
+
+                        }
+                        System.out.println("");
+                    }
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.accion);
+                    System.out.println("");
+                    System.out.println("¿Desea registar alguna anotación? ");
+                    videoTienda.registrarAnotacion(usuario, notacion);
+
+                    break;
+                case 3:
+                    usuario = videoTienda.leerUsuario();
+                    videoTienda.saludarUsuario(usuario);
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.terror);
+                    peliculaAlquilada = videoTienda.getPelicula();
+
+
+                    for (int i = 0; i <= 4; i++) {
+                        if (i == peliculaAlquilada) {
+                            videoTienda.terror[i] = "Pelicula no esta disponible";
+
+                        }
+                        System.out.println("");
+                    }
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.terror);
+                    System.out.println("");
+                    System.out.println("¿Desea registar alguna anotación? ");
+                    videoTienda.registrarAnotacion(usuario, notacion);
+
+
+                    break;
+                case 4:
+                    usuario = videoTienda.leerUsuario();
+                    videoTienda.saludarUsuario(usuario);
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.aventura);
+                    peliculaAlquilada = videoTienda.getPelicula();
+
+
+                    for (int i = 0; i <= 4; i++) {
+                        if (i == peliculaAlquilada) {
+                            videoTienda.aventura[i] = "Pelicula no esta disponible";
+
+                        }
+                        System.out.println("");
+                    }
+                    System.out.println("");
+                    videoTienda.mostrarPorGenero(videoTienda.aventura);
+                    System.out.println("");
+                    System.out.println("¿Desea registar alguna anotación? ");
+                    videoTienda.registrarAnotacion(usuario, notacion);
+
+                    break;
+
+                case 5:
+                    System.out.println("Ingresa cero para salir, uno para continuar");
+                    opcion = lector.nextInt();
+                    System.out.println("Hasta pronto!!!");
+            }
+
+        } while (opcion != 0);
+
+    }
+}
+
+            </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para <br>
+            poder facturar los productos que vende a sus clientes y para ello, los
+            productos tienen unas <br>
+            características que deben indicársele al cliente para que pueda escoger el producto a
+            comprar. Para cada cliente, se tienen las opciones de compra de <br>
+            producto, consulta de precios <br>
+            por producto y devoluciones en caso de que se presenten.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio5;
+
+                import java.util.ArrayList;
+                import java.util.List;
+                import java.util.Scanner;
+                
+                public class Producto {
+                
+                    private String nombre;
+                    private int precio;
+                    private String caracteristicas;
+                
+                
+                    public Producto() {
+                    }
+                
+                    public Producto(String nombre, int precio, String caracteristicas) {
+                        this.nombre = nombre;
+                        this.precio = precio;
+                        this.caracteristicas = caracteristicas;
+                    }
+                
+                    public String getNombre() {
+                        return nombre;
+                    }
+                
+                    public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                    }
+                
+                    public int getPrecio() {
+                        return precio;
+                    }
+                
+                    public void setPrecio(int precio) {
+                        this.precio = precio;
+                    }
+                
+                    public String getCaracteristicas() {
+                        return caracteristicas;
+                    }
+                
+                    public void setCaracteristicas(String caracteristicas) {
+                        this.caracteristicas = caracteristicas;
+                    }
+                
+                    @Override
+                    public String toString() {
+                        return "Producto{" +
+                                "nombre='" + nombre + '\'' +
+                                ", precio=" + precio +
+                                ", caracteristicas='" + caracteristicas + '\'' +
+                                '}';
+                    }
+                }
+                
+                package Ejercicio5;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Drogueria{
+
+    private int cantidadProducto = 0;
+    private String productoCompra;
+    private int precio = 0;
+    private Boolean vendido = false;
+
+    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+
+    Producto[] productos = {new Producto("Acetaminofen", 1000, "Dolores generales"),
+            new Producto("Ibuprofeno", 1200, "Dolores especificos"),
+            new Producto("Dolex", 1500, "Malestar gripal, dolores de cabeza"),
+            new Producto("Advil", 1800, "Dolores de cabeza"),
+            new Producto("Aspirina", 2000, "Malestar, fiebre y congestion nasal")};
+
+    public void listaProductos(){
+        for (int i = 0; i < productos.length; i++) {
+            System.out.println(productos[i].getNombre());
+        }
+    }
+
+    public void mostrarMenu() throws IOException {
+        int opcion = 4;
+        do {
+            System.out.println("");
+            System.out.println("Droguería mi Salud ");
+            System.out.println("");
+            System.out.println("1. Comprar Producto ");
+            System.out.println("2. Consultar Precio ");
+            System.out.println("3. Devolución producto");
+            System.out.println("4. Salir ");
+            System.out.print("Ingresa la opcion: ");
+            opcion = Integer.parseInt(bfr.readLine());
+            evaluarOpcion(opcion);
+
+        }while (opcion != 4);
+    }
+
+    private void evaluarOpcion(int opcion)throws IOException {
+        switch (opcion){
+
+            case 1:{
+
+                System.out.println("Digita el nombre del producto que deseas comprar");
+                productoCompra = bfr.readLine();
+                System.out.println("Digita la cantidad de productos a comprar");
+                cantidadProducto = Integer.parseInt(bfr.readLine());
+                for(int j = 0; j < productos.length; j++){
+                    if(productoCompra.equalsIgnoreCase(productos[j].getNombre())){
+                        precio = (productos[j].getPrecio() * cantidadProducto);
+                        System.out.println("La venta del producto " + productos[j].getNombre() +
+                                " El total a pagar es: " + precio);
+                        vendido = true;
+                    }
+                }
+
+
+            }break;
+
+            case 2:{
+
+                System.out.println("¿Cúal producto desea averiguar? :");
+                productoCompra = bfr.readLine();
+                for(int k = 0; k < productos.length; k++){
+                    if(productoCompra.equalsIgnoreCase(productos[k].getNombre()))  {
+                        System.out.println("El valor del producto es " + productos[k].getPrecio() + "$ la unidad");
+                        System.out.println("");
+                        System.out.println("Las características del producto " + productos[k].getCaracteristicas());
+                    }
+                }
+
+            }break;
+            case 3:{
+
+                System.out.println("Ingresa el nombre del producto que desea devolver:");
+                productoCompra = bfr.readLine();
+
+                for(int l = 0; l < productos.length; l++){
+
+                    if(productoCompra.equalsIgnoreCase(productos[l].getNombre()) && vendido == true){
+                        System.out.println("El producto de la devolución es " + productos[l].getNombre() +
+                                " para un Total en $ de " + precio +"$");
+                        vendido = false;
+                    }
+                }
+            }break;
+            }
+
+        }
+
+    }
+
+    package Ejercicio5;
+
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
+    import java.util.Scanner;
+
+    public class Main5 {
+
+        public static void main(String[] args) throws IOException {
+
+            BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+            Drogueria drogueria = new Drogueria();
+            drogueria.listaProductos();
+            drogueria.mostrarMenu();
+
+        }
+    }
+         </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las <br>
+            respectivas revisiones y requiere una aplicación que le permita registrar los
+            servicios generados a <br>
+            sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones <br>
+            por parte del cliente. También debe existir registro de
+            salida del taller con las novedades y otra <br>
+            de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en <br>
+            la motocicleta al entregarla.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio6;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class TallerMotocicletas {
+
+
+    Scanner lector = new Scanner(System.in);
+
+    private int repuesto;
+    private int cilindraje;
+    private String placa;
+    private String marca;
+    private String fechaIngreso;
+    private String fechaSalida;
+    private String novedadUsuario;
+    private String novedadTecnico;
+    private String entrada;
+    private String salida;
+    private List<String> entradas = new ArrayList<>();
+
+
+    public int getRepuesto() {
+        return repuesto;
+    }
+
+    public void setRepuesto(int repuesto) {
+        this.repuesto = repuesto;
+    }
+
+    public int getCilindraje() {
+        return cilindraje;
+    }
+
+    public void setCilindraje(int cilindraje) {
+        this.cilindraje = cilindraje;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public void setFechaIngreso(String fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
+
+    public String getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(String fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public String getNovedadUsuario() {
+        return novedadUsuario;
+    }
+
+    public void setNovedadUsuario(String novedadUsuario) {
+        this.novedadUsuario = novedadUsuario;
+    }
+
+    public String getNovedadTecnico() {
+        return novedadTecnico;
+    }
+
+    public void setNovedadTecnico(String novedadTecnico) {
+        this.novedadTecnico = novedadTecnico;
+    }
+
+    public String getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(String entrada) {
+        this.entrada = entrada;
+    }
+
+    public String getSalida() {
+        return salida;
+    }
+
+    public void setSalida(String salida) {
+        this.salida = salida;
+    }
+
+    public void menuServicio() {
+        System.out.println("\tBienvenido a su Taller el Maquinista \n");
+        System.out.println(" Servicios que te ofrecemos :");
+        System.out.println("Mantenimiento General");
+        System.out.println("Sistema elctrico");
+        System.out.println("Mantenimiento Preentivo");
+    }
+
+    public void menuInicio() {
+        System.out.println("");
+        System.out.println("\t Menú ");
+        System.out.println(" ");
+        System.out.println("1.Registrar Ingreso");
+        System.out.println("2.Mostrar Servicios Ingresados");
+        System.out.println("3.Entregar motocicleta");
+        System.out.println("4.Salir");
+    }
+
+    public String optenerPlaca(){
+        System.out.println("Ingresa el número de placa ");
+        placa = lector.next();
+        return placa;
+    }
+
+    public String optenerMarca(){
+        System.out.println("Ingresa la marca ");
+        marca = lector.next();
+        return marca;
+    }
+
+    public String optenerNovedadUsuario(){
+        System.out.println("Ingresa novedad de la moto ");
+        novedadUsuario = lector.next();
+        return novedadUsuario;
+    }
+
+    public String optenerFechaIngreso(){
+        System.out.println("Ingresa la fecha del ingreso al taller ");
+        fechaIngreso = lector.next();
+        return fechaIngreso;
+    }
+
+    public String optenerFechaSalida(){
+        System.out.println("Ingresa la fecha de entrega de la motocicleta al usuario ");
+        fechaSalida = lector.next();
+        return fechaSalida;
+    }
+
+    public Boolean registraCilindraje() {
+        Boolean respuesta;
+        int cilindro;
+        System.out.println("Ingresa el cilindraje de tu moto");
+        cilindro = lector.nextInt();
+
+        if(cilindro >= 500 ){
+            respuesta = true;
+            System.out.println("Bienvenido a su taller de confianza el Maquinista ");
+
+        }else {
+            respuesta = false;
+            System.out.println("Lo sentimos el taller aún no realiza ese servicio, hasta la proxima vez ");
+        }
+
+        return respuesta;
+    }
+
+    public String novedadPorMecanico(String novedad){
+        String respuesta;
+        System.out.println("Además de las fallas mencionadas por el usuario" +
+                "nuestro tecnico encontro  : " + novedad);
+        respuesta = lector.nextLine();
+        return respuesta;
+    }
+
+    public String registrarSalida(String placa, String fechaSalida){
+        String registro;
+        System.out.println(" ");
+        System.out.println("EL registro de entrada con numero de placa " + placa +
+                  " se realizo el día " + fechaSalida);
+        registro = lector.nextLine();
+        return registro;
+
+    }
+
+    public int inventarioRepuestos(){
+        System.out.println("Digita la cantidad de repuestos utilizados ");
+        repuesto = lector.nextInt();
+        return repuesto;
+    }
+
+    public String optenerNovedad(){
+        String novedad;
+        System.out.println("Ingresa la novedad ");
+        novedad = lector.next();
+        return novedad;
+    }
+
+    public void mostrarRegistros(){
+        System.out.println("   Lista de motocicletas ingresadas al sistema de el taller el maquinista");
+        System.out.println("");
+        System.out.println(" Los datos de registro son : " );
+    }
+
+    public String registrarEntrada( int numero, String dato, String dato1, String dato2, String dato3){
+
+        String entrada;
+        lector.nextLine();
+        entrada = numero  +" Entrada con numero de placa " + dato + " de maraca " + dato1 + " y fecha de ingreso "
+                + dato2 + " El usuario reporta la siguiente novedad " + dato3 ;
+
+
+        numero = numero++;
+        return entrada;
+    }
+
+
+    public List<String> ingresarEntrada(String dato){
+        entradas.add(dato);
+        return entradas;
+    }
+
+    public void mostrarEntradas(ArrayList<String> listas){
+
+        for(String cadena :entradas) {
+            System.out.println(cadena);
+        }
+    }
+
+}
+package Ejercicio6;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main6 {
+
+    public static void main(String[] args) {
+        Scanner lector = new Scanner(System.in);
+
+        String placa = "";
+        String novedadU = "";
+        String novedadU1 = "";
+        String novedadU2 = "";
+        String novedadT;
+        String novedadUsuario;
+        String novedadTecnico = "";
+        String fechaIngreso = "";
+        String fechaSalida = "";
+        String marca = "";
+        Boolean atencion;
+        List<String> entradas = new ArrayList<String>();
+        String entrada;
+        int opcion = 1;
+        int controlEntrada = 1;
+        int motoSalida = 0;
+        int cantidadRepuestos = 0;
+
+        TallerMotocicletas tallerMoto = new TallerMotocicletas();
+
+        tallerMoto.menuServicio();
+        atencion = tallerMoto.registraCilindraje();
+
+
+            do {
+                System.out.println("");
+
+                tallerMoto.menuInicio();
+                System.out.println("Digita una opcion");
+                opcion = lector.nextInt();
+
+                switch (opcion) {
+                    case 1:
+
+                        placa = tallerMoto.optenerPlaca();
+                        marca = tallerMoto.optenerMarca();
+                        fechaIngreso = tallerMoto.optenerFechaIngreso();
+                        novedadU = tallerMoto.optenerNovedadUsuario();
+                        lector.nextLine();
+                        entrada = tallerMoto.registrarEntrada(controlEntrada, placa, marca, fechaIngreso, novedadU);
+                        controlEntrada ++;
+                        entradas = tallerMoto.ingresarEntrada(entrada);
+                        lector.nextLine();
+                        System.out.println("");
+
+                        break;
+
+                    case 2:
+                        tallerMoto.mostrarRegistros();
+                        lector.nextLine();
+                        tallerMoto.mostrarEntradas((ArrayList<String>) entradas);
+
+                        break;
+
+                    case 3:
+
+                        placa = tallerMoto.optenerPlaca();
+                        fechaSalida = tallerMoto.optenerFechaSalida();
+                        tallerMoto.registrarSalida(placa, fechaSalida);
+                        System.out.println("Los repuestos utilizados en el mantenimiento fueron : ");
+                        cantidadRepuestos = tallerMoto.inventarioRepuestos();
+                        novedadT = tallerMoto.optenerNovedad();
+                        novedadTecnico = tallerMoto.novedadPorMecanico(novedadT);
+
+
+                        System.out.println("Digita el numero de registro a salir");
+                        motoSalida = lector.nextInt();
+                        entradas.remove(motoSalida);
+
+
+                        break;
+
+                    case 4:
+                        System.out.println("Para salir digita cero");
+                        opcion = lector.nextInt();
+
+                }
+            } while (opcion != 0);
+
+    }
+}
+
+                
+                
+
+   
+
+         </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC <br>
+            (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en
+            metros Para <br>
+            cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para <br>
+            cada uno y establecer en qué rango se encuentra (bajo peso, normal,
+            sobrepeso y obeso).</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio7;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Persona {
+
+                    String nombre;
+                    Float peso;
+                    Float estatura;
+                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+
+                    public Persona(){
+
+                    }
+
+                    public void calcularImc()throws IOException{
+
+                        Float bmi;
+
+                        System.out.println("Digita su nombre");
+                        nombre = bfr.readLine();
+
+                        System.out.println("Digita el peso");
+                        peso = Float.parseFloat(bfr.readLine());
+
+                        System.out.println("Digita la estatura");
+                        estatura = Float.parseFloat(bfr.readLine());
+
+                        bmi = (peso /(estatura * estatura));
+
+                        if(bmi < 18.5){
+                            System.out.println("Senor(a) " + nombre + " Usted se encuentra bajo de peso");
+                        } else if (bmi >= 18.5 && bmi <= 24.9) {
+                            System.out.println("Senor(a) " + nombre + " Su peso es normal");
+                        } else if (bmi >= 25 && bmi <= 29.9) {
+                            System.out.println("Senor(a) " + nombre + " Usted se encuentra en sobrepeso");
+                        } else if (bmi >= 30) {
+                            System.out.println("Senor(a) " + nombre + " Usted se encuentra obeso");
+
+                        }
+
+                    }
+                }
+                package Ejercicio7;
+
+                import java.io.IOException;
+
+                public class MainImc {
+
+                    public static void main(String[] args) throws IOException {
+                        Persona persona = new Persona();
+                        persona.calcularImc();
+
+                    }
+                }
+               
+         </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le <br>
+            permita registrar los pedidos de los clientes en cuanto a las tortas que realiza.
+            Cada torta tiene <br>
+            unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que <br>
+            la aplicación permita registrar los pedidos, las tortas disponibles
+            y las ventas que se registren <br>
+            diariamente.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio8;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+                
+                public class Pastelero {
+                
+                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                    Cliente clientes[];
+                    String pedido;
+                    Torta torta;
+                    int conteoVenta;
+                    int venta = 0;
+                    Torta tortasVendidas[];
+                
+                    Torta tortas[] = {new Torta("Torta mousse", "Chocolate","Crema de chocolate","Para ocho personas"),
+                    new Torta("Torta de fresa", "Fresa", "Fresas con crema de vainilla", "Para seis personas"),
+                    new Torta("Nutella", "Queso crema", "Snippet galletas y nutella", "Para ocho personas"),
+                    new Torta("Hojaldre", "Fresas con almendra", "Hojaldre fresas y almendra", "Para dos personas"),
+                    new Torta("Banana", "Chocolate y platano", "Crema de leche fresas", "Para diez personas")};
+                
+                   public void listarTortasDisponible(){
+                       for (Torta torta: tortas) {
+                           System.out.println(torta.getNombre());
+                       }
+                   }
+                
+                    public int registrarPedido() throws IOException {
+                        String nombre;
+                        String nombreTorta;
+                        System.out.println("Digita tu nombre");
+                        nombre = bfr.readLine();
+                        System.out.println("Digita el nombre de la torta que deseas llevar ");
+                        nombreTorta = bfr.readLine();
+                
+                        for (Torta torta: tortas) {
+                            if(nombreTorta.equalsIgnoreCase(torta.getNombre())){
+                                Torta tortasVendidas[] = {new Torta(torta.getNombre(), torta.getSabor(), torta.getDecoracion(), torta.getCantidadPorcion())};
+                                Cliente cliente[] = {new Cliente(nombre)};
+                                pedido = "El pedido lo realizo el señor(a) "
+                                        + nombre + " El nombre de la torta es " + torta.getNombre() + " " +
+                                        "con sabor a " + torta.getSabor();
+                                venta ++;
+                            }
+                        }
+                
+                        System.out.println(pedido);
+                        return venta;
+                    }
+                
+                    public void mostrarVentaDia(int v){
+                        System.out.println(v);
+                
+                    }
+                
+                
+                    public void mostrarMenu() throws IOException {
+                        int opcion = 4;
+                        do {
+                            System.out.println("");
+                            System.out.println("    Pasteleria don Carlos ");
+                            System.out.println("");
+                            System.out.println("1. Tortas disponibles ");
+                            System.out.println("2. Pedidos ");
+                            System.out.println("3. Venta diaria");
+                            System.out.println("4. Salir ");
+                            System.out.print("Ingresa la opcion: ");
+                            opcion = Integer.parseInt(bfr.readLine());
+                            evaluarOpcion(opcion);
+                
+                        }while (opcion != 4);
+                    }
+                
+                    private void evaluarOpcion(int opcion)throws IOException {
+                        switch (opcion){
+                
+                            case 1:{
+                
+                                System.out.println("");
+                                listarTortasDisponible();
+                
+                            }break;
+                
+                            case 2:{
+                
+                                System.out.println("");
+                             conteoVenta = registrarPedido();
+                
+                            }break;
+                
+                            case 3:{
+                                System.out.println("");
+                                System.out.println("La cantida de tortas vendidas el dia de hoy = " + conteoVenta);
+                
+                            }break;
+                        }
+                
+                    }
+                }
+                
+                package Ejercicio8;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Main8 {
+
+                    public static void main(String[] args) throws IOException {
+
+                        int contadorTortaVendida;
+                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                        Pastelero pastelero = new Pastelero();
+                        pastelero.mostrarMenu();
+                    /* contadorTortaVendida = pastelero.registrarPedido();
+                        pastelero.mostrarVentaDia(contadorTortaVendida);*/
+                    }
+                }
+               
+         </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de <br>
+            diferentes figuras geométricas, para ello requiere una aplicación que le
+            facilite el ejercicio <br>
+            solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si <br>
+            desea calcular el área de un rectángulo, triángulo o
+            trapecio. No olvide solicitar los datos <br>
+            necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio9;
+
+                import java.io.IOException;
+
+                public abstract class Figura {
+
+                    protected String nombre;
+
+                    public Figura(){
+
+                    }
+                    public Figura(String nombre) {
+                        this.nombre = nombre;
+                    }
+
+                    public String getNombre() {
+                        return this.nombre;
+                    }
+
+                    public void setNombre(String nombre) {
+                        this.nombre = nombre;
+                    }
+
+                    @Override
+                    public String toString() {
+                        return "Figura{" +
+                                "nombre='" + nombre + '\'' +
+                                '}';
+                    }
+
+                    abstract public void calcularArea() throws IOException;
+                }
+
+                package Ejercicio9;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Rectangulo extends Figura{
+
+                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                    double largo;
+                    double ancho;
+
+                    public Rectangulo() {
+
+                    }
+
+                    public Rectangulo(String nombre, double largo, double ancho) {
+                        super(nombre);
+                        this.largo = largo;
+                        this.ancho = ancho;
+                    }
+
+                    public double getLargo() {
+                        return this.largo;
+                    }
+
+                    public void setLargo(double largo) {
+                        this.largo = largo;
+                    }
+
+                    public double getAncho() {
+                        return this.ancho;
+                    }
+
+                    public void setAncho(double ancho) {
+                        this.ancho = ancho;
+                    }
+
+                    @Override
+                    public void calcularArea() throws IOException {
+
+                        double area;
+                        System.out.println("Ingresa el largo");
+                        largo = Double.parseDouble(bfr.readLine());
+                        System.out.println("Ingresa el ancho");
+                        ancho = Double.parseDouble(bfr.readLine());
+                        area = (largo * ancho);
+                        System.out.println("El area del Rectangulo es: " + area);
+
+                    }
+                }
+
+                package Ejercicio9;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Trapecio extends Figura{
+
+                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                    private double base;
+                    private double base1;
+                    private double altura;
+
+                    public Trapecio() {
+
+                    }
+
+                    @Override
+                    public void calcularArea() throws IOException {
+                        double area;
+                        System.out.println("Digita la la primera base deltrapecio");
+                        base = Double.parseDouble(bfr.readLine());
+                        System.out.println("Digita la segunda base del trapecio ");
+                        base1 = Double.parseDouble(bfr.readLine());
+                        System.out.println("Digita la altura del trapecio ");
+                        altura = Double.parseDouble(bfr.readLine());
+                        area = ((base + base1) * (altura)) / 2;
+                        System.out.println("El area del trapecio es " + area);
+
+                    }
+                }
+                package Ejercicio9;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Triangulo extends Figura{
+
+                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                    private double base;
+                    private double altura;
+
+                    public Triangulo() {
+
+                    }
+
+                    @Override
+                    public void calcularArea() throws IOException {
+                        double area;
+                        System.out.println("Ingresa la base del triangulo");
+                        base = Double.parseDouble(bfr.readLine());
+                        System.out.println("Ingresa la altura del triangulo");
+                        altura = Double.parseDouble(bfr.readLine());
+                        area = (base * altura) / 2;
+                        System.out.println("El area del triangulo es: " + area );
+                    }
+                }
+                package Ejercicio9;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Main9 {
+
+                    public static void main(String[] args) throws IOException {
+                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                        int opcion;
+
+                        Rectangulo rectangulo = new Rectangulo();
+                        Triangulo triangulo = new Triangulo();
+                        Trapecio trapecio = new Trapecio();
+                        opcion = 4;
+                        do {
+                            System.out.println("");
+                            System.out.println("     Areas de figuras geometricas ");
+                            System.out.println("");
+                            System.out.println("1. Calcular area Rectangulo ");
+                            System.out.println("2. Calcular area Triangulo ");
+                            System.out.println("3. Calcular area Trapecio");
+                            System.out.println("4. Salir ");
+                            System.out.print("Ingresa la opcion: ");
+                            opcion = Integer.parseInt(bfr.readLine());
+
+                            switch (opcion){
+                                case 1:{
+                                    rectangulo.calcularArea();
+                                    break;
+                                }
+                                case 2:{
+                                    triangulo.calcularArea();
+                                    break;
+                                }
+                                case 3:{
+                                    trapecio.calcularArea();
+                                    break;
+                                }
+
+                            }
+                        }while (opcion !=4);
+
+                    }
+                }  
+         </code>
+        </pre>    
+    </div>
+
+    <div class="ejercicio">
+        <h2 class="enunciado">10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una <br>
+            aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la
+            cuenta tenga <br>
+            los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros <br>
+            o consultas de valor. En los ingresos no se pueden insertar
+            valores negativos y para los retiros el <br>
+            valor no puede ser mayor al valor que tiene en la cuenta.</h2>
+
+        <pre>
+            <code class="language-java">
+                package Ejercicio10;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Banco {
+
+                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+
+                    Cuenta cuentas[] = {new Cuenta("Faber", 100000), new Cuenta("Diana", 200000),
+                            new Cuenta("Helena", 150000),new Cuenta("Samuel", 120000)};
+
+                    public void mostrarInicio(){
+                        System.out.println("       Bienvenido a su banco Fiel  ");
+                    }
+
+                    public void realizarIngreso() throws IOException {
+                        String titular;
+                        double valor = 0;
+                        double nuevoValor = 0;
+                        System.out.println("Digita el nombre del titular");
+                        titular = bfr.readLine();
+                        System.out.println("Digita la cantidad a ingresar");
+                        valor = Double.parseDouble(bfr.readLine());
+                        for (Cuenta cuenta: cuentas) {
+                            if(titular.equalsIgnoreCase(cuenta.getTitular()) && valor > 0 ) {
+
+                                nuevoValor = valor + cuenta.getCantidad();
+                                cuenta.setCantidad(nuevoValor);
+                            }
+                        }
+                    }
+
+                    public void retiro() throws IOException {
+
+                        String titular;
+                        double valor = 0;
+                        double nuevoValor = 0;
+                        System.out.println("Digita el nombre del titular");
+                        titular = bfr.readLine();
+                        System.out.println("Digita la cantidad a retirar");
+                        valor = Double.parseDouble(bfr.readLine());
+                        for (Cuenta cuenta: cuentas) {
+                            if(titular.equalsIgnoreCase(cuenta.getTitular()) && valor <= cuenta.getCantidad() ) {
+
+                                nuevoValor = cuenta.getCantidad() - valor;
+                                cuenta.setCantidad(nuevoValor);
+                            }
+                        }
+                    }
+
+                    public void consultarSaldo() throws IOException {
+
+                        String titular;
+                        System.out.println("Digita el nombre del titular");
+                        titular = bfr.readLine();
+
+                        for (Cuenta cuenta: cuentas) {
+                            if(titular.equalsIgnoreCase(cuenta.getTitular())) {
+
+                                System.out.println("Señor(a) " + cuenta.getTitular() + " " + "Su saldo es de: " + cuenta.getCantidad());
+                            }
+                        }
+
+                    }
+
+
+
+                    public void mostrarMenu() throws IOException {
+                        int opcion = 4;
+                        do {
+                            System.out.println("");
+                            System.out.println("    Banco Fiel ");
+                            System.out.println("");
+                            System.out.println("1. Realizar Ingresos ");
+                            System.out.println("2. Retiro ");
+                            System.out.println("3. Consultar saldo");
+                            System.out.println("4. Salir ");
+                            System.out.print("Ingresa la opcion: ");
+                            opcion = Integer.parseInt(bfr.readLine());
+                            evaluarOpcion(opcion);
+
+                        }while (opcion != 4);
+                    }
+
+                    private void evaluarOpcion(int opcion)throws IOException {
+                        switch (opcion){
+
+                            case 1:{
+
+                                System.out.println("");
+                                realizarIngreso();
+
+                            }break;
+
+                            case 2:{
+
+                                System.out.println("");
+                                retiro();
+
+                            }break;
+
+                            case 3:{
+                                System.out.println("");
+                                consultarSaldo();
+
+                            }break;
+                        }
+
+                    }
+
+                }
+
+                package Ejercicio10;
+
+                public class Cuenta {
+
+                private String titular;
+                private double cantidad;
+
+                public Cuenta(){
+
+                }
+
+                public Cuenta(String titular, double cantidad){
+                    this.titular = titular;
+                    this.cantidad = cantidad;
+                }
+
+                    public String getTitular() {
+                        return titular;
+                    }
+
+                    public void setTitular(String titular) {
+                        this.titular = titular;
+                    }
+
+                    public double getCantidad() {
+                        return cantidad;
+                    }
+
+                    public void setCantidad(double cantidad) {
+                        this.cantidad = cantidad;
+                    }
+
+                    @Override
+                    public String toString() {
+                        return "Cuenta{" +
+                                "titular='" + titular + '\'' +
+                                ", cantidad=" + cantidad +
+                                '}';
+                    }
+                }
+
+                package Ejercicio10;
+
+                import java.io.BufferedReader;
+                import java.io.IOException;
+                import java.io.InputStreamReader;
+
+                public class Main10 {
+
+                    public static void main(String[] args) throws IOException {
+                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+
+                        Banco banco = new Banco();
+                        banco.mostrarInicio();
+                        banco.mostrarMenu();
+
+                    }
+                }   
+         </code>
+        </pre>    
+    </div>
+
+    </div>
+    
+</body>
+</html>

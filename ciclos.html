@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller ciclos</title>
+    <link rel="stylesheet" href="/Css/style.css" type="text/css"/>
+	<link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+  
+        <div class="menu" id="menu-info">
+			<ul class="nav-items">
+			   <li><a href="/variableImpresion.html" class="btn1">Taller Variables e Impresión</a></li>
+			   <li><a href="/condicionales.html" class="btn2">Taller Condicionales</a></li>
+			   <li><a href="#" class="btn3">Taller Ciclos</a></li>
+			   <li><a href="/arreglos.html" class="btn4">Taller Arreglos</a></li>
+               <li><a href="/hv.html" class="btn1">Hoja de vida</a></li>
+		 </ul>
+
+		 </div>
+
+        <h1 class="titulo">Taller de ciclos desarrollo en PsInt</h1>
+        <div class="tImpresionPsInt" id="portafolio">
+			<div class="ejercicio">
+				<h2 class="enunciado">1. Realizar la siguiente figura por medio del ciclo Para</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso Ejercicio1
+	
+                        Definir num Como Entero;
+                        Definir i Como Entero;
+                        Definir j Como Entero;
+                        
+                        Escribir "Ingresa la cantidad de filas";
+                        Leer num;
+                        
+                        Escribir "*";
+                        
+                        para i <- 1 Hasta num Con Paso  1 Hacer
+                            Escribir "*" Sin Saltar;
+                            Para j <- 1 Hasta i Con Paso 1 Hacer
+                                
+                                Escribir "*" Sin Saltar;
+                            FinPara
+                            Escribir "";
+                        FinPara
+                        
+                    FinProceso
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso sin_titulo
+                            
+                        Definir contadorFila Como Entero;
+                        Definir columna Como Entero;
+                        Definir j Como Entero;
+                        Definir numeroFila Como Entero;
+                        
+                        Escribir "Ingresa el numero de filas";
+                        Leer numeroFila;
+                        contadorFila <- 0;
+                        j <- numeroFila - 1;
+                        
+                        Mientras contadorFila < numeroFila Hacer
+                            columna <- 0;
+                            
+                            Mientras columna < numeroFila Hacer
+                                
+                                si columna = j Entonces
+                                    Escribir "*" Sin Saltar;
+                                    
+                                    j <- j -1;
+                                    
+                                SiNo
+                                    si columna > j Entonces
+                                        Escribir "*" Sin Saltar;
+                                    SiNo
+                                        Escribir " " Sin Saltar;
+                                    FinSi
+                                FinSi
+                                
+                                columna <- columna +1;
+                                
+                            FinMientras
+                            
+                            Escribir "";
+                            contadorFila <- contadorFila + 1;
+                            
+                        FinMientras
+                             
+                    FinProceso
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso Ejercicio3Arbol
+	
+                        Definir contador Como Entero;
+                        Definir i Como Entero;
+                        Definir espacios Como Entero;
+                        Definir contadorEspacios Como Entero;
+                        Definir aste Como Caracter;
+                        Definir tabulador Como Caracter;
+                        
+                        contador <- 0;
+                        aste<- "*";
+                        espacios <- 12;
+                        contadorEspacios <- 1;
+                        tabulador <- "";
+                        i <- 1;
+                        
+                        Escribir "             *";
+                        
+                        
+                        Repetir
+                            
+                            Mientras contador <= i Hacer
+                                aste <- Concatenar(aste, "*");
+                                contador <- contador + 1;
+                            FinMientras
+                            i <- i + 1;
+                            Mientras contadorEspacios <= espacios Hacer
+                                tabulador <- Concatenar(tabulador, " ");
+                                contadorEspacios <- contadorEspacios + 1;
+                            FinMientras
+                            
+                            Escribir tabulador, aste;
+                            contador <- contador - 1;
+                            espacios <- espacios - 1;
+                            contadorEspacios <- 1;
+                            tabulador <- "";
+                            
+                        Hasta Que contador = 12 ;
+                        Escribir "            *** ";
+                        Escribir "            *** ";
+                        Escribir "           ***** ";
+                        Escribir "          ******* ";
+                        
+                    FinProceso
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario <br>
+                    indique por medio del ciclo Para; esta debe
+                    ser impresa del 1 al 10. Ejemplo, si el usuario indica <br>
+                    que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso EjercicioTablaDeMultiplicar
+	
+                        Definir i Como Entero;
+                        Definir num Como Entero;
+                        Definir resultado Como Entero;
+                        
+                        
+                        Escribir "Ingresa el numero del que desees optener la pabla de multiplicar";
+                        Leer num;
+                        
+                        Para i <- 1 Hasta 10 Con Paso 1 Hacer
+                            resultado <- i * num;
+                            Escribir i," ", "x"," ", num," ", "="," ", resultado;
+                        FinPara
+                    FinProceso
+                      
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario
+                    desee terminar dicho ciclo.</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso Ejercicio5Menu
+                        
+                        Definir opcion Como Entero;
+                        Definir nombre Como Caracter;
+                        Definir saludo Como Caracter;
+                        Definir bandera Como Logico;
+                        
+                        bandera <- Verdadero;
+                        opcion <- 0;
+                        Repetir
+                            
+                            Escribir "               Menú de Usuario               ";
+                            Escribir " ";
+                            Escribir "1. Captura nombre ";
+                            Escribir "2. Saludar persona ";
+                            Escribir "3. Salir del sistema";
+                            
+                            Escribir "Digita la opcion que desee";
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Escribir "Digita tu nombre completo";
+                                    Leer nombre;
+                                    
+                                    Escribir "Digita verdadero para continuar, o falso para terminar";
+                                    Leer bandera;
+                                    
+                                2:
+                                    Escribir "Hola señor(a)"," ", nombre, " ", "Bienvenido(a) a nuestro programa";
+                                    
+                                    Escribir "Digita verdadero para continuar, o falso para terminar";
+                                    Leer bandera;
+                                    
+                                3:
+                                    bandera <- falso;
+                                    Limpiar Pantalla;
+                                    
+                            FinSegun
+                            
+                        Hasta Que bandera = falso;
+                        
+                    FinProceso
+                      
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">6. Se está creando una aplicación que va a estar conectada con un prototipo que permita <br>
+                    almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener <br>
+                    nombre
+                    completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos <br>
+                    verificando que el número no esté almacenado, buscar contactos almacenados y
+                    eliminar <br>
+                    contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así
+                    lo indique.</h2>
+				<pre>
+					<code class="language-css" >
+                        
+                            Proceso Ejercicio6AlmacenarContactos
+                                
+                            Definir nombre Como Caracter;
+                            Definir telefono Como Caracter;
+                            Definir organizacion Como Caracter;
+                            Escribir "<-------------------------------->";
+                            Definir nombre1 Como Caracter;
+                            Definir telefono1 Como Caracter;
+                            Definir organizacion1 Como Caracter;
+                            Escribir "<-------------------------------->";
+                            Definir nombre2 Como Caracter;
+                            Definir telefono2 Como Caracter;
+                            Definir organizacion2 Como Caracter;
+                            Escribir "<-------------------------------->";
+                            Definir menu Como Entero;
+                            Definir i Como Entero;
+                            Definir p Como Caracter;
+                            Definir buscarContacto Como Caracter;
+                            Definir tiempo Como Caracter;
+                            Definir existe Como Logico;
+                            Definir resetear Como Logico;
+                            Definir delete Como Caracter;
+
+                            Escribir "<-------------------------------->";
+
+                            p <- "";
+                            i <- 0;
+                            menu <- 0;
+                            existe <- falso;
+                            resetear <- falso;
+                            i <- 0;
+                            nombre <- "";
+
+                            Repetir
+                                
+                                Escribir "         Lista de contactos         ";
+                                Escribir "";
+                                Escribir " 1. Crear contacto ";
+                                Escribir " 2. Buscar contacto ";
+                                Escribir " 3. Borrar contacto ";
+                                Escribir " 4. Salir ";
+                                Leer menu;
+                                
+                                Segun menu Hacer
+                                    1:
+                                        
+                                        Mientras i < 3 Hacer
+                                            
+                                            si i == 0 Entonces
+                                                Escribir "Ingresa el nombre completo ";
+                                                Leer nombre;
+                                                Escribir "Ingresa el numero de telefono";
+                                                Leer telefono;
+                                                Escribir "Ingresa nombre de la organizacion";
+                                                Leer organizacion;
+                                                existe <- verdadero;
+                                                
+                                            FinSi
+                                            
+                                            si i == 1 Entonces
+                                                Escribir "Ingresa el nombre completo ";
+                                                Leer nombre1;
+                                                Escribir "Ingresa el numero de telefono";
+                                                Leer telefono1;
+                                                si telefono == telefono1 Entonces
+                                                    Escribir "Este numero ya existe, por favor ingresa uno diferente";
+                                                    Escribir "digita un numero diferente";
+                                                    Leer telefono1;
+                                                    Mientras telefono <> telefono1 Hacer
+                                                        
+                                                        Escribir "Ingresa nombre de la organizacion";
+                                                        Leer organizacion1;
+                                                    FinMientras
+                                                    
+                                                    
+                                                SiNo
+                                                    Escribir "Ingresa nombre de la organizacion";
+                                                    Leer organizacion1;
+                                                FinSi
+                                                
+                                            FinSi
+                                            
+                                            si i == 2 Entonces
+                                                Escribir "Ingresa el nombre completo ";
+                                                Leer nombre2;
+                                                Escribir "Ingresa el numero de telefono";
+                                                Leer telefono2;
+                                                si telefono2 == telefono  O telefono2 == telefono1 Entonces
+                                                    Limpiar Pantalla;
+                                                    Escribir "Este numero ya existe, por favor ingresa uno diferente";
+                                                        Escribir "digita un numero diferente";
+                                                        Leer telefono2;
+                                                        Escribir "Ingresa nombre de la organizacion";
+                                                        Leer organizacion2;
+                                                SiNo
+                                                    Escribir "Ingresa nombre de la organizacion";
+                                                    Leer organizacion2;
+                                                FinSi
+                                                
+                                            FinSi
+                                            
+                                            i <- i + 1;
+                                            si i >= 3 Entonces
+                                                Escribir " Lo sentimos espacio insuficiente";
+                                            FinSi
+                                            Limpiar Pantalla;
+                                        FinMientras
+                                        
+                                        si i >= 3 Entonces
+                                            Escribir " Lo sentimos espacio insuficiente";
+                                        FinSi
+                                        
+                                        Escribir "Desea continuar?";
+                                        Leer resetear;
+                                        
+                                    2:
+                                        Limpiar Pantalla;
+                                        si existe == falso Entonces
+                                            Escribir "Lista de contactos vacia";
+                                        FinSi
+                                    
+                                        Escribir "Digita el nombre del contacto que deseas buscar";
+                                        Leer buscarContacto;
+                                        si buscarContacto == nombre Entonces
+                                            Escribir "El numero de contacto es ", " ", telefono, " ", "con nombre de: ", " ", nombre, " ", "hace parte de la empresa ", " ", organizacion;
+                                        SiNo
+                                            si buscarContacto == nombre1 Entonces
+                                                Escribir "El numero de contacto es: ", " ", telefono1, " ", "con nombre de: ", " ", nombre1, " ", "hace parte de la empresa ", " ", organizacion1;
+                                            SiNo
+                                                si buscarContacto == nombre2 Entonces
+                                                    Escribir "El numero de contacto es: ", " ", telefono2, " ", "con nombre de: ", " ", nombre2, " ", "hace parte de la empresa ", " ", organizacion2;
+                                                SiNo
+                                                    Escribir "El contacto no existe";
+                                                FinSi
+                                                
+                                            FinSi
+                                        
+                                        FinSi
+                                        Escribir "Desea continuar?";
+                                        Leer resetear;
+                                        
+                                    3:
+                                        Escribir "Digita el nombre del contacto que quieres eliminar:";
+                                        Leer buscarContacto;
+                                        si buscarContacto == nombre Entonces
+                                            nombre <- "";
+                                            telefono <- "";
+                                            organizacion <- "";
+                                            i <- i - 1;
+                                        SiNo
+                                            si buscarContacto == nombre1 Entonces
+                                                nombre1 <- "";
+                                                telefono1 <- "";
+                                                organizacion1 <- "";
+                                                i <- i -1;
+                                            SiNo
+                                                si buscarContacto == nombre2 Entonces
+                                                    nombre2 <- "";
+                                                    telefono2 <- "";
+                                                    organizacion2 <- "";
+                                                    i <- i - 1;
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                        Escribir "Espacio suficiente";
+                                        
+                                    4:
+                                        Escribir "Desea continuar?";
+                                        Leer resetear;
+                                        
+                                FinSegun
+                                
+                            Hasta Que resetear = Falso
+
+                            FinProceso
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del <br>
+                    barrio y requiere una aplicación que permita registrar los vehículos que se
+                    cuidan en estas <br>
+                    instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y <br>
+                    marca, y los datos del cliente como son nombre completo y número de
+                    teléfono. Para cada <br>
+                    vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y <br>
+                    consultar si un vehículo se encuentra en el parqueadero. Recuerde que
+                    el sistema debe terminar <br>
+                    cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar  <br>
+                    máximo 5 vehículos.</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso ParqueaderoGuardian
+	
+                        Definir nUsuario1 Como Caracter;
+                        Definir nUsuario2 Como Caracter;
+                        Definir nUsuario3 Como Caracter;
+                        Definir nUsuario4 Como Caracter;
+                        Definir nUsuario5 Como Caracter;
+                        Definir telefonoU1 Como Caracter;
+                        Definir telefonoU2 Como Caracter;
+                        Definir telefonoU3 Como Caracter;
+                        Definir telefonoU4 Como Caracter;
+                        Definir telefonoU5 Como Caracter;
+                        Definir vehiculo1 Como Caracter;
+                        Definir vehiculo2 Como Caracter;
+                        Definir vehiculo3 Como Caracter;
+                        Definir vehiculo4 Como Caracter;
+                        Definir vehiculo5 Como Caracter;
+                        Definir placaV1 Como Caracter;
+                        Definir placaV2 Como Caracter;
+                        Definir placaV3 Como Caracter;
+                        Definir placaV4 Como Caracter;
+                        Definir placaV5 Como Caracter;
+                        Definir conteoRegistro Como Entero;
+                        Definir opcion Como Entero;
+                        Definir ingresoSistema Como Entero;
+                        Definir ingreso Como Entero;
+                        Definir menu Como Entero;
+                        Definir usuario Como Entero;
+                        Definir usuario1 Como Entero;
+                        Definir usuario2 Como Entero;
+                        Definir usuario3 Como Entero;
+                        Definir usuario4 Como Entero;
+                        Definir usuario5 Como Entero;
+                        Definir bandera Como Logico;
+                        Definir abandonar Como Logico;
+                        Definir vehiculo1Dentro Como Logico;
+                        Definir vehiculo2Dentro Como Logico;
+                        Definir vehiculo3Dentro Como Logico;
+                        Definir vehiculo4Dentro Como Logico;
+                        Definir vehiculo5Dentro Como Logico;
+                        Definir cupoMaximo Como Entero;
+                        
+                        vehiculo1Dentro <- Verdadero;
+                        vehiculo2Dentro <- Verdadero;
+                        vehiculo3Dentro <- Verdadero;
+                        vehiculo4Dentro <- Verdadero;
+                        vehiculo5Dentro <- Verdadero;
+                        abandonar <- falso;
+                        bandera <- Verdadero;
+                        nUsuario1 <- "";
+                        telefonoU1 <- "";
+                        vehiculo1 <- "";
+                        placaV1 <- "";
+                        nUsuario2 <- "";
+                        telefonoU2 <- "";
+                        vehiculo2 <- "";
+                        placaV2 <- "";
+                        conteoRegistro <- 0;
+                        ingreso <- 0;
+                        nUsuario3 <- "";
+                        telefonoU3 <- "";
+                        vehiculo3 <- "";
+                        placaV3 <- "";
+                        nUsuario4 <- "";
+                        telefonoU4 <- "";
+                        vehiculo4 <- "";
+                        placaV4 <- "";
+                        nUsuario5 <- "";
+                        telefonoU5 <- "";
+                        vehiculo5 <- "";
+                        placaV5 <- "";
+                        usuario <- 0;
+                        usuario1 <- 0;
+                        usuario2 <- 0;
+                        usuario3 <- 0;
+                        usuario4 <- 0;
+                        usuario5 <- 0;
+                        cupoMaximo <- 5;
+                        
+                        Escribir "          Bienvenido a su paqueadero el guardián    ";
+                        Escribir "<======================================================>";
+                        
+                        Repetir
+                            Escribir " 1. Registrar vehiculo";
+                            Escribir " 2. Ingresar al parqueadero ";
+                            Escribir " 3. Salir del paqueadero ";
+                            Escribir " 4. Consultar si vehiculo esta dentro del parqueadero ";
+                            Escribir " 5. Salir ";
+                            Leer ingresoSistema;
+                            
+                            Segun ingresoSistema Hacer
+                                1:
+                                    Limpiar Pantalla;
+                                    si conteoRegistro >= cupoMaximo Entonces
+                                        Escribir "El parqueadero se encuentra lleno";
+                                        Escribir "No es posible registrar su entrada";
+                                        
+                                    SiNo
+                                        Escribir "###############################";
+                                        Escribir "Digita nombre completo";
+                                        Leer nUsuario1;
+                                        Escribir "Digita el número telefono";
+                                        Leer placaV1;
+                                        Escribir "Digita la marca del vehiculo";
+                                        Leer vehiculo1;
+                                        Escribir "Digita el número de la placa";
+                                        Leer placaV1;
+                                        Escribir "Registro exitoso";
+                                        conteoRegistro <- conteoRegistro + 1;
+                                        usuario1 <- 1;
+                                        Limpiar Pantalla;
+                                        
+                                        Escribir "###############################";
+                                        Escribir "Digita nombre completo";
+                                        Leer nUsuario2;
+                                        Escribir "Digita el número telefono";
+                                        Leer placaV2;
+                                        Escribir "Digita la marca del vehiculo";
+                                        Leer vehiculo2;
+                                        Escribir "Digita el número de la placa";
+                                        Leer placaV2;
+                                        Escribir "Registro exitoso";
+                                        conteoRegistro <- conteoRegistro + 1;
+                                        usuario2 <- 2;
+                                        Limpiar Pantalla;
+                                        
+                                        Escribir "###############################";
+                                        Escribir "Digita nombre completo";
+                                        Leer nUsuario3;
+                                        Escribir "Digita el número telefono";
+                                        Leer placaV3;
+                                        Escribir "Digita la marca del vehiculo";
+                                        Leer vehiculo3;
+                                        Escribir "Digita el número de la placa";
+                                        Leer placaV3;
+                                        Escribir "Registro exitoso";
+                                        conteoRegistro <- conteoRegistro + 1;
+                                        usuario3 <- 3;
+                                        Limpiar Pantalla;
+                                        
+                                        Escribir "###############################";
+                                        Escribir "Digita nombre completo";
+                                        Leer nUsuario4;
+                                        Escribir "Digita el número telefono";
+                                        Leer placaV4;
+                                        Escribir "Digita la marca del vehiculo";
+                                        Leer vehiculo4;
+                                        Escribir "Digita el número de la placa";
+                                        Leer placaV4;
+                                        Escribir "Registro exitoso";
+                                        conteoRegistro <- conteoRegistro + 1;
+                                        usuario4 <- 4;
+                                        Limpiar Pantalla;
+                                        
+                                        Escribir "###############################";
+                                        Escribir "Digita nombre completo";
+                                        Leer nUsuario5;
+                                        Escribir "Digita el número telefono";
+                                        Leer placaV5;
+                                        Escribir "Digita la marca del vehiculo";
+                                        Leer vehiculo5;
+                                        Escribir "Digita el número de la placa";
+                                        Leer placaV5;
+                                        Escribir "Registro exitoso";
+                                        conteoRegistro <- conteoRegistro + 1;
+                                        usuario5 <- 5;
+                                        
+                                        Escribir "Digita verdadero para continuar, o falso para terminar";
+                                        Leer bandera;
+                                    FinSi
+                                    
+                                    
+                                2:
+                                    Limpiar Pantalla;
+                                    Escribir "Ingresa el número de usuario";
+                                    Leer usuario;
+                                    
+                                    Si usuario == usuario1 Entonces
+                                        Escribir"Señor", " ",nUsuario1," ","propietario del vehiculo", " ",vehiculo1," ","con placas"," ",placaV1;
+                                        Escribir "Bienvenido a su parquedero El guardián";
+                                        Escribir "Ingreso exitoso";
+                                    SiNo
+                                        Si usuario == usuario2 Entonces
+                                            Escribir"Señor", " ",nUsuario2," ","propietario del vehiculo", " ",vehiculo2," ","con placas"," ",placaV2;
+                                            Escribir "Bienvenido a su parquedero El guardián";
+                                            Escribir "Ingreso exitoso";
+                                        SiNo
+                                            Si usuario == usuario3 Entonces
+                                                Escribir"Señor", " ",nUsuario3," ","propietario del vehiculo", " ",vehiculo3," ","con placas"," ",placaV3;
+                                                Escribir "Bienvenido a su parquedero El guardián";
+                                                Escribir "Ingreso exitoso";
+                                                
+                                            SiNo
+                                                Si usuario == usuario4 Entonces
+                                                    Escribir"Señor", " ",nUsuario4," ","propietario del vehiculo", " ",vehiculo4," ","con placas"," ",placaV4;
+                                                    Escribir "Bienvenido a su parquedero El guardián";
+                                                    Escribir "Ingreso exitoso";
+                                                    
+                                                SiNo
+                                                    Si usuario == usuario5 Entonces
+                                                        Escribir"Señor", " ",nUsuario5," ","propietario del vehiculo", " ",vehiculo5," ","con placas"," ",placaV5;
+                                                        Escribir "Bienvenido a su parquedero El guardián";
+                                                        Escribir "Ingreso exitoso";
+                                                    
+                                                    SiNo
+                                                        Escribir "Usuario no existe";
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                3:
+                                    Limpiar Pantalla;
+                                    
+                                    Escribir "Ingresa el numero de usuario";
+                                    Leer usuario;
+                                    
+                                    Si usuario == usuario1 Entonces
+                                        Escribir"El vehículo con placas :", " ", placaV1, " ", "registra su salida del parqueadero";
+                                        vehiculo1Dentro <- Falso;
+                                    SiNo
+                                        Si usuario== usuario2 Entonces
+                                            Escribir"El vehículo con placas :", " ", placaV2, " ", "registra su salida del parqueadero";
+                                            vehiculo2Dentro <- Falso;
+                                        SiNo
+                                            Si usuario == usuario3 Entonces
+                                                Escribir"El vehículo con placas :", " ", placaV3, " ", "registra su salida del parqueadero";
+                                                vehiculo3Dentro <- Falso;
+                                            SiNo
+                                                Si usuario == usuario4 Entonces
+                                                    Escribir"El vehículo con placas :", " ", placaV4, " ", "registra su salida del parqueadero";
+                                                    vehiculo4Dentro <- Falso;
+                                                SiNo
+                                                    Si  usuario == usuario5 Entonces
+                                                        Escribir"El vehículo con placas :", " ", placaV5, " ", "registra su salida del parqueadero";
+                                                        vehiculo5Dentro <- Falso;
+                                                    SiNo
+                                                        Escribir "El vehículo no se encuentra registrado";
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                    
+                                    
+                                4:
+                                    Limpiar Pantalla;
+                                    Escribir "Ingresa el número del usuario";
+                                    Leer usuario;
+                                    
+                                    Si  usuario == usuario1 Y vehiculo1Dentro == Falso Entonces
+                                        Escribir "El vehículo ", " ", placaV1, " ", "con propietario"," ", nUsuario1, " ", "no se encuentra en el parqueadero" ;
+                                    SiNo
+                                        Si  usuario== usuario2 Y vehiculo2Dentro == Falso Entonces
+                                            Escribir "El vehículo ", " ", placaV2, " ", "con propietario"," ", nUsuario2, " ", "no se encuentra en el parqueadero" ;
+                                        SiNo
+                                            Si usuario == usuario3 Y vehiculo3Dentro == Falso Entonces
+                                                Escribir "El vehículo ", " ", placaV3, " ", "con propietario"," ", nUsuario3, " ", "no se encuentra en el parqueadero" ;
+                                            SiNo
+                                                Si usuario == usuario4 Y vehiculo4Dentro == Falso Entonces
+                                                    Escribir "El vehículo ", " ", placaV4, " ", "con propietario"," ", nUsuario4, " ", "no se encuentra en el parqueadero" ;
+                                                SiNo
+                                                    Si usuario == usuario5 Y vehiculo5Dentro == Falso Entonces
+                                                        Escribir "El vehículo ", " ", placaV5, " ", "con propietario"," ", nUsuario5, " ", "no se encuentra en el parqueadero" ;
+                                                    SiNo
+                                                        Escribir "El vehículo esta dentro del parqueadero";
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                    
+                                5:
+                                    Escribir "Digita 1 para salir, o cero para continuar";
+                                    Leer abandonar;
+                                    
+                                De Otro Modo:
+                                    Escribir "Opción no valida, intentalo de nuevo";
+                            FinSegun
+                        Hasta Que abandonar == Verdadero
+                    FinProceso
+                    
+					</code>
+				</pre>
+			</div>
+
+            <div class="ejercicio">
+				<h2 class="enunciado">8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus <br>
+                    clientes en los cursos de enseñanza automovilística y establecer quienes lo han
+                    aprobado para <br>
+                    continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir  <br>
+                    registrar su ingreso al curso, consultar usuarios que hayan
+                    presentado el curso y resultados de la  <br>
+                    prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el <br>
+                    usuario así lo indique. Tenga presente que la
+                    escuela tiene capacidad máxima de gestionar 8
+                    usuarios en su totalidad.</h2>
+				<pre>
+					<code class="language-css" >
+                        Proceso EscuelaConduccion
+	
+                        Definir nombre Como Caracter;
+                        Definir nombreEst1 Como Caracter;
+                        Definir nombreEst2 Como Caracter;
+                        Definir nombreEst3 Como Caracter;
+                        Definir nombreEst4 Como Caracter;
+                        Definir nombreEst5 Como Caracter;
+                        Definir nombreEst6 Como Caracter;
+                        Definir nombreEst7 Como Caracter;
+                        Definir nombreEst8 Como Caracter;
+                        Definir usuario Como Entero;
+                        Definir usuario1 Como Entero;
+                        Definir usuario2 Como Entero;
+                        Definir usuario3 Como Entero;
+                        Definir usuario4 Como Entero;
+                        Definir usuario5 Como Entero;
+                        Definir usuario6 Como Entero;
+                        Definir usuario7 Como Entero;
+                        Definir usuario8 Como Entero;
+                        Definir contadorEstudiantes Como Entero;
+                        Definir registroCurso Como Logico;
+                        Definir masRegistros Como Logico;
+                        Definir resultadoPrueba Como Logico;
+                        Definir capacidadMaxima Como Entero;
+                        Definir categoria Como Entero;
+                        Definir categoriaC1 Como Entero;
+                        Definir categoriaC2 Como Entero;
+                        Definir categoriaC3 Como Entero;
+                        Definir menu Como Entero;
+                        Definir salir Como Logico;
+                        Definir sinRegistro Como Entero;
+                        Definir contadorCategoriaC1 Como Entero;
+                        Definir contadorCategoriaC2 Como Entero;
+                        Definir contadorCategoriaC3 Como Entero;
+                        Definir resultPrueba1 Como Logico;
+                        Definir resultPrueba2 Como Logico;
+                        Definir resultPrueba3 Como Logico;
+                        Definir resultPrueba4 Como Logico;
+                        Definir resultPrueba5 Como Logico;
+                        Definir resultPrueba6 Como Logico;
+                        Definir resultPrueba7 Como Logico;
+                        Definir resultPrueba8 Como Logico;
+                        
+                        salir <- Falso;
+                        usuario <- 0;
+                        usuario1 <- 0;
+                        usuario2 <- 0;
+                        usuario3 <- 0;
+                        usuario4 <- 0;
+                        usuario5 <- 0;
+                        usuario6 <- 0;
+                        usuario7 <- 0;
+                        usuario8 <- 0;
+                        contadorCategoriaC1 <- 0;
+                        contadorCategoriaC2 <- 0;
+                        contadorCategoriaC3 <- 0;
+                        categoria <- 0;
+                        categoriaC1 <- 1;
+                        categoriaC2 <- 2;
+                        categoriaC3 <- 3;
+                        capacidadMaxima <- 8;
+                        sinRegistro <- 0;
+                        
+                        contadorEstudiantes <- 0;
+                        
+                        
+                        
+                        Escribir "####################################################";
+                        Escribir "Bienvenido  a la escuela Automovilística el Maestro";
+                        Escribir "####################################################";
+                        
+                        Repetir
+                            Escribir "";
+                            Escribir " 1.Registrar un curso";
+                            Escribir " 2.Presentar pueba";
+                            Escribir " 3.Consultar resultado de las pruebas";
+                            Escribir " 4.Consultar lista de inscritos";
+                            Escribir " 5.Salir";
+                            Leer menu;
+                            
+                            Segun menu Hacer
+                                1:
+                                    Limpiar Pantalla;
+                                    Escribir " ¿A cual de nustros cursos desea registrarse?";
+                                    Escribir " Marca1 para categoria C1";
+                                    Escribir " Marca2 para categoria C2";
+                                    Escribir " Marca3 para categoria C3";
+                                    Leer categoria;
+                                    
+                                    Si contadorCategoriaC1 == 3 Y contadorCategoriaC2 == 3 Y contadorCategoriaC3 == 2 Entonces
+                                        Limpiar Pantalla;
+                                        Escribir "El cupo maximo para todo los cursos se ha excedido";
+                                        Escribir "Lo sentimos no quedan cupos disponibles para ninguna categoria";
+                                    SiNo
+                                        Si categoria == categoriaC1 Y contadorCategoriaC1 < 3 Entonces
+                                        
+                                            Escribir "Digita el nombre del estudiante";
+                                            Leer nombreEst1;
+                                            Escribir "señor@"," ",nombreEst1," ","se ha matriculado al curso categoria C1";
+                                            contadorCategoriaC1 <- contadorCategoriaC1 + 1;
+                                            Escribir "Total de inscritos son :", " ",contadorCategoriaC1;
+                                            Leer usuario1;
+                                            Limpiar Pantalla;
+                                            Escribir "Digita el nombre del estudiante";
+                                            Leer nombreEst2;
+                                            Escribir "señor@"," ",nombreEst2," ","se ha matriculado al curso categoria C1";
+                                            contadorCategoriaC1 <- contadorCategoriaC1 + 1;
+                                            Escribir "Total de inscritos son :", " ",contadorCategoriaC1;
+                                            Leer usuario2;
+                                            Limpiar Pantalla;
+                                            Escribir "Digita el nombre del estudiante";
+                                            Leer nombreEst3;
+                                            Escribir "señor@"," ",nombreEst3," ","se ha matriculado al curso categoria C1";
+                                            contadorCategoriaC1 <- contadorCategoriaC1 + 1;
+                                            Escribir "Total de inscritos son :", " ",contadorCategoriaC1;
+                                            Leer usuario3;
+                                            Limpiar Pantalla;
+                                            Escribir "El cupo maximo para la categoria C1 se ha excedido";
+                                            Escribir "Lo sentimos no quedan cupos disponibles para la categoria C1";
+                                            
+                                        SiNo
+                                            Si categoria == categoriaC2 Y contadorCategoriaC2 < 3 Entonces
+                                                
+                                                Escribir "Digita el nombre del estudiante";
+                                                Leer nombreEst4;
+                                                Escribir "señor@"," ",nombreEst4," ","se ha matriculado al curso categoria C2";
+                                                contadorCategoriaC2 <- contadorCategoriaC2 + 1;
+                                                Escribir "Total de inscritos son :", " ",contadorCategoriaC2;
+                                                Leer usuario4;
+                                                Limpiar Pantalla;
+                                                Escribir "Digita el nombre del estudiante";
+                                                Leer nombreEst5;
+                                                Escribir "señor@"," ",nombreEst5," ","se ha matriculado al curso categoria C2";
+                                                contadorCategoriaC2 <- contadorCategoriaC2 + 1;
+                                                Escribir "Total de inscritos son :", " ",contadorCategoriaC2;
+                                                Leer usuario5;
+                                                Limpiar Pantalla;
+                                                Escribir "Digita el nombre del estudiante";
+                                                Leer nombreEst6;
+                                                Escribir "señor@"," ",nombreEst6," ","se ha matriculado al curso categoria C2";
+                                                contadorCategoriaC2 <- contadorCategoriaC2 + 1;
+                                                Escribir "Total de inscritos son :", " ",contadorCategoriaC2;
+                                                Leer usuario6;
+                                                Limpiar Pantalla;
+                                                Escribir "El cupo maximo para la categoria C2 se ha excedido";
+                                                Escribir "Lo sentimos no quedan cupos disponibles para la categoria C2";
+                                                
+                                            SiNo
+                                                Si categoria == categoriaC3 Y contadorCategoriaC3 < 2 Entonces
+                                                    Escribir "Digita el nombre del estudiante";
+                                                    Leer nombreEst7;
+                                                    Escribir "señor@"," ",nombreEst7," ","se ha matriculado al curso categoria C3";
+                                                    contadorCategoriaC3 <- contadorCategoriaC3 + 1;
+                                                    Escribir "Total de inscritos son :", " ",contadorCategoriaC3;
+                                                    Leer usuario7;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Digita el nombre del estudiante";
+                                                    Leer nombreEst8;
+                                                    Escribir "señor@"," ",nombreEst8," ","se ha matriculado al curso categoria C3";
+                                                    contadorCategoriaC3 <- contadorCategoriaC3 + 1;
+                                                    Escribir "Total de inscritos son :", " ",contadorCategoriaC3;
+                                                    Leer usuario8;
+                                                    Limpiar Pantalla;
+                                                    Escribir "El cupo maximo para la categoria C3 se ha excedido";
+                                                    Escribir "Lo sentimos no quedan cupos disponibles para la categoria C3";
+                                                    
+                                                SiNo
+                                                    Escribir "Opción no registrada";
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi	
+                                    
+                                    
+                                2:
+                                    Escribir "Ingresa el nombre del estudiante";
+                                    Leer nombre;
+                                    
+                                    Si nombre == nombreEst1 Entonces
+                                        Escribir "El estudiante", nombreEst1 ;  
+                                        Escribir "Digita 1 para presentar la prueba, cero si no";
+                                        Leer resultPrueba1;
+                                    SiNo
+                                        Si nombre == nombreEst2 Entonces
+                                            Escribir "El estudiante", nombreEst2 ;  
+                                            Escribir "Digita 1 para presentar la prueba, cero si no";
+                                            Leer resultPrueba2;
+                                        SiNo
+                                            Si nombre == nombreEst3 Entonces
+                                                Escribir "El estudiante", nombreEst3 ;  
+                                                Escribir "Digita 1 para presentar la prueba, cero si no";
+                                                Leer resultPrueba3;
+                                            SiNo
+                                                Si nombre == nombreEst4 Entonces
+                                                    Escribir "El estudiante", nombreEst4 ;  
+                                                    Escribir "Digita 1 para presentar la prueba, cero si no";
+                                                    Leer resultPrueba4;
+                                                SiNo
+                                                    Si nombre == nombreEst5 Entonces
+                                                        Escribir "El estudiante", nombreEst5 ;  
+                                                        Escribir "Digita 1 para presentar la prueba, cero si no";
+                                                        Leer resultPrueba5;
+                                                    SiNo
+                                                        Si nombre == nombreEst6 Entonces
+                                                            Escribir "El estudiante", nombreEst6 ;  
+                                                            Escribir "Digita 1 para presentar la prueba, cero si no";
+                                                            Leer resultPrueba6;
+                                                        SiNo
+                                                            Si nombre == nombreEst7 Entonces
+                                                                Escribir "El estudiante", nombreEst7 ;  
+                                                                Escribir "Digita 1 para presentar la prueba, cero si no";
+                                                                Leer resultPrueba7;
+                                                            SiNo
+                                                                Si nombre == nombreEst8 Entonces
+                                                                    Escribir "El estudiante", nombreEst8 ;  
+                                                                    Escribir "Digita 1 para presentar la prueba, cero si no";
+                                                                    Leer resultPrueba8;
+                                                                SiNo
+                                                                    Escribir "No valido";
+                                                                FinSi
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                    
+                                3:
+                                    Limpiar Pantalla;
+                                    Escribir "Listado de las pruebas realizadas en el periodo actual";
+                                    Escribir "#########################################################";
+                                    Escribir "El estudiante ",nombreEst1, " aprobo el curso? ", resultPrueba1;
+                                    Escribir "El estudiante ",nombreEst2, " aprobo el curso? ", resultPrueba2;
+                                    Escribir "El estudiante ",nombreEst3, " aprobo el curso? ", resultPrueba3;
+                                    Escribir "El estudiante ",nombreEst4, " aprobo el curso? ", resultPrueba4;
+                                    Escribir "El estudiante ",nombreEst5, " aprobo el curso? ", resultPrueba5;
+                                    Escribir "El estudiante ",nombreEst6, " aprobo el curso? ", resultPrueba6;
+                                    Escribir "El estudiante ",nombreEst7, " aprobo el curso? ", resultPrueba7;
+                                    Escribir "El estudiante ",nombreEst8, " aprobo el curso? ", resultPrueba8;
+                    
+                                    
+                                    
+                                4:	
+                                    Escribir "Listado de persona inscritas a los diferentes cursos";
+                                    Escribir "######################################################";
+                                    
+                                    Escribir "Inscritos en la categoria C1";
+                                    Escribir " 1. Alumno(a) ", nombreEst1;
+                                    Escribir " 2. Alumno(a) ", nombreEst2;
+                                    Escribir " 3. Alumno(a) ", nombreEst3;
+                                    Escribir "";
+                                    Escribir "Inscritos en la categoria C2";
+                                    Escribir " 1. Alumno(a) ", nombreEst4;
+                                    Escribir " 2. Alumno(a) ", nombreEst5;
+                                    Escribir " 3. Alumno(a) ", nombreEst6;
+                                    Escribir "";
+                                    Escribir "Inscritos en la categoria C3";
+                                    Escribir " 1. Alumno(a) ", nombreEst7;
+                                    Escribir " 2. Alumno(a) ", nombreEst8;
+                                      
+                                5:
+                                    Escribir "Digita 1 para continuar, cero para cancelar";
+                                    Leer salir;
+                                De Otro Modo:
+                                    Escribir "Opcion no valida";
+                            FinSegun
+                            
+                        Hasta Que salir == Verdadero
+                    FinProceso
+                    
+					</code>
+				</pre>
+			</div>
+
+
+            <h1 class="titulo">Taller de ciclos desarrollo en Java</h1>
+            <div class="tImpresionPsInt" id="portafolio">
+                <div class="ejercicio">
+                    <h2 class="enunciado">1. Realizar la siguiente figura por medio del ciclo Para</h2>
+                    <pre>
+                        <code class="language-java" >
+                            package Ejercicio1;
+
+                            import java.io.BufferedReader;
+                            import java.io.IOException;
+                            import java.io.InputStreamReader;
+                            
+                            public class Figura1Escalon {
+                            
+                                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                            
+                                public void mostrarFigura() throws IOException {
+                            
+                                    int numero;
+                                    System.out.println("Ingrsa un numero");
+                                    numero = Integer.parseInt(bfr.readLine());
+                            
+                                    for (int i = 0; i < numero; i++) {
+                                        for(int j = 0; j <= i - 1; j++) {
+                                            System.out.print(" *");
+                                        }
+                            
+                                        System.out.println("");
+                            
+                                    }
+                                }
+                            }
+
+                            package Ejercicio1;
+
+                            import java.io.BufferedReader;
+                            import java.io.IOException;
+                            import java.io.InputStreamReader;
+
+                            public class Main1 {
+
+                                public static void main(String[] args) throws IOException {
+
+                                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                    Figura1Escalon figura1Escalon = new Figura1Escalon();
+                                    figura1Escalon.mostrarFigura();
+
+                                }
+                            }
+
+                        </code>
+                    </pre>
+                </div>
+
+
+                
+                    <div class="ejercicio">
+                        <h2 class="enunciado">2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer</h2>
+                        <pre>
+                            <code class="language-java" >
+                                package Ejercicio2;
+
+                                import java.io.BufferedReader;
+                                import java.io.IOException;
+                                import java.io.InputStreamReader;
+
+                                public class Figura2EscalonInvertido {
+
+                                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+
+                                    public void mostrarFigura2() throws IOException {
+
+                                        int numero;
+                                        System.out.println("Ingrsa un numero");
+                                        numero = Integer.parseInt(bfr.readLine());
+
+                                        for (int i = 0; i < numero; i++) {
+                                            for(int j = numero - 1 -i; j >= 0; j--) {
+                                                System.out.print("  ");
+                                            }
+
+                                            for (int k = 0; k <= i; k++) {
+                                                System.out.print("* ");
+                                            }
+                                            System.out.println("");
+
+                                        }
+                                    }
+                                }
+
+                                package Ejercicio2;
+
+                                import Ejercicio1.Figura1Escalon;
+
+                                import java.io.BufferedReader;
+                                import java.io.IOException;
+                                import java.io.InputStreamReader;
+
+                                public class Main2 {
+
+                                    public static void main(String[] args) throws IOException {
+
+                                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                        Figura2EscalonInvertido figura2EscalonInvertido = new Figura2EscalonInvertido();
+                                        figura2EscalonInvertido.mostrarFigura2();
+
+                                    }
+                                }
+    
+                            </code>
+                        </pre>
+                    </div>
+
+                        <div class="ejercicio">
+                            <h2 class="enunciado">3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</h2>
+                            <pre>
+                                <code class="language-java" >
+                                    package Ejercicio3;
+
+                                    import java.io.BufferedReader;
+                                    import java.io.IOException;
+                                    import java.io.InputStreamReader;
+
+                                    public class FiguraArbol {
+
+                                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                        public void mostrarFigura3() throws IOException {
+
+                                            int numero = 12;
+
+                                            for (int i = 0; i < numero; i++) {
+                                                for(int j = numero - 1 -i; j >= 0; j--) {
+                                                    System.out.print(" ");
+                                                }
+
+                                                for (int k = 0; k <= i; k++) {
+                                                    System.out.print("* ");
+                                                }
+                                                System.out.println("");
+
+                                            }
+
+                                        }
+                                    }
+
+                                    package Ejercicio3;
+
+                                    import java.io.BufferedReader;
+                                    import java.io.IOException;
+                                    import java.io.InputStreamReader;
+
+                                    public class Main3 {
+
+                                        public static void main(String[] args) throws IOException {
+                                            BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+
+                                            FiguraArbol figuraArbol = new FiguraArbol();
+                                            figuraArbol.mostrarFigura3();
+
+                                            System.out.println("          *** ");
+                                            System.out.println("          *** ");
+                                            System.out.println("         ***** ");
+                                            System.out.println("        ******* ");
+                                        }
+                                    }
+        
+                                </code>
+                            </pre>
+                        </div>    
+
+                            <div class="ejercicio">
+                                <h2 class="enunciado">4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario <br>
+                                    indique por medio del ciclo Para; esta debe
+                                    ser impresa del 1 al 10. Ejemplo, si el usuario indica <br>
+                                    que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</h2>
+                                <pre>
+                                    <code class="language-java" >
+                                        package Ejercicio4;
+
+                                        import java.io.BufferedReader;
+                                        import java.io.IOException;
+                                        import java.io.InputStreamReader;
+                                        
+                                        public class TablaMultiplicar {
+                                        
+                                            public static void main(String[] args) throws IOException {
+                                        
+                                                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                                int numero;
+                                                int resultado;
+                                        
+                                                System.out.println("Ingresa el numero de la tabla a multiplicar ");
+                                                numero = Integer.parseInt(bfr.readLine());
+                                        
+                                                for (int i = 1; i <= 10; i++) {
+                                                    resultado = i * numero;
+                                        
+                                                    System.out.println(i + " " + "x" + " " + numero + " " + "=" + " " + resultado);
+                                                }
+                                        
+                                            }
+                                        }
+            
+                                    </code>
+                                </pre>
+                            </div>  
+
+                         <div class="ejercicio">
+                                    <h2 class="enunciado">Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario <br>
+                                        desee terminar dicho ciclo.</h2>
+                                    <pre>
+                                        <code class="language-java" >
+                                            package Ejercicio5;
+
+                                            import java.io.BufferedReader;
+                                            import java.io.IOException;
+                                            import java.io.InputStreamReader;
+
+                                            public class Menu {
+
+                                                BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                                private int opcion = 0;
+                                                private String nombre;
+                                                private String saludo;
+
+                                            public void mostrarMenu() throws IOException {
+
+                                                int opcion = 3;
+                                                do {
+                                                    System.out.println("        Menú de Usuario");
+                                                    System.out.println("");
+                                                    System.out.println("1. Capturar nombre ");
+                                                    System.out.println("2. Saludar persona ");
+                                                    System.out.println("3. Salir sistema ");
+                                                    System.out.println("");
+                                                    System.out.println("Digita la opcion que desee");
+                                                    opcion = Integer.parseInt(bfr.readLine());
+
+                                                    evaluarOpcion(opcion);
+
+                                                }while (opcion != 3);
+
+                                            }
+                                                private void evaluarOpcion(int opcion) throws IOException {
+
+                                                    switch (opcion){
+                                                        case 1:{
+                                                            System.out.println("Digita tu nombre completo");
+                                                            nombre = bfr.readLine();
+
+                                                        }break;
+
+                                                        case 2:{
+                                                            System.out.println("Hola señor(a) " + nombre + " Bienvenido(a) a nuestro programa ");
+
+                                                        }break;
+
+                                                    }
+
+                                                }
+
+                                            }
+
+                                            package Ejercicio5;
+
+                                            import java.io.BufferedReader;
+                                            import java.io.IOException;
+                                            import java.io.InputStreamReader;
+
+                                            public class Main5 {
+
+                                                public static void main(String[] args) throws IOException {
+                                                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                                    Menu menu = new Menu();
+                                                    menu.mostrarMenu();
+                                                }
+                                            }
+
+                
+                                        </code>
+                                    </pre>
+                      </div>     
+                      
+                      <div class="ejercicio">
+                        <h2 class="enunciado">6. Se está creando una aplicación que va a estar conectada con un prototipo que permita <br>
+                            almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener <br>
+                            nombre
+                            completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos <br>
+                            verificando que el número no esté almacenado, buscar contactos almacenados y <br>
+                            eliminar
+                            contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así <br>
+                            lo indique.</h2>
+                        <pre>
+                            <code class="language-java" >
+                                package Ejercicio6;
+
+                                public class Contacto {
+                                
+                                    private String nombre;
+                                    private String numeroTelefono;
+                                    private String organizacion;
+                                
+                                    public Contacto(){
+                                
+                                    }
+                                
+                                    public Contacto(String nombre, String numeroTelefono, String organizacion){
+                                        this.nombre = nombre;
+                                        this.numeroTelefono = numeroTelefono;
+                                        this.organizacion = organizacion;
+                                    }
+                                
+                                    public Contacto(String nombre) {
+                                        this.nombre = nombre;
+                                        this.numeroTelefono = "";
+                                        this.organizacion = "";
+                                    }
+                                
+                                    public String getNombre() {
+                                        return this.nombre;
+                                    }
+                                
+                                    public void setNombre() {
+                                        this.nombre = nombre;
+                                    }
+                                
+                                    public String getNumeroTelefono() {
+                                        return this.numeroTelefono;
+                                    }
+                                
+                                    public void setNumeroTelefono(String numeroTelefono) {
+                                        this.numeroTelefono = numeroTelefono;
+                                    }
+                                
+                                    public String getOrganizacion() {
+                                        return this.organizacion;
+                                    }
+                                
+                                    public void setOrganizacion(String organizacion) {
+                                        this.organizacion = organizacion;
+                                    }
+                                
+                                    public boolean equals(Contacto c){
+                                        if(this.numeroTelefono.equalsIgnoreCase(c.getNumeroTelefono())){
+                                            return true;
+                                        }
+                                        return false;
+                                    }
+                                
+                                    @Override
+                                    public String toString() {
+                                        return "Contacto{" +
+                                                "nombre='" + nombre + '\'' +
+                                                ", numeroTelefono='" + numeroTelefono + '\'' +
+                                                ", organizacion='" + organizacion + '\'' +
+                                                '}';
+                                    }
+                                }
+
+                                package Ejercicio6;
+
+                                import javax.swing.*;
+                                import java.io.BufferedReader;
+                                import java.io.IOException;
+                                import java.io.InputStreamReader;
+
+                                public class Telefono {
+
+
+                                    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                    private Contacto[] contactos;
+
+                                    public Telefono(){
+                                        this.contactos = new Contacto[3];
+                                    }
+
+                                    public Telefono(int tamanio) {
+                                        this.contactos = new Contacto[tamanio];
+                                    }
+
+                                    public void aniadirContacto(Contacto contac) {
+
+                                        System.out.println("");
+
+                                        if(existeContato(contac)) {
+                                            System.out.println("El contacto ya existe");
+                                        }else if(evaluarAgenda()) {
+                                            System.out.println("La agenda esta llena, no es posible crear mas contactos");
+                                        }else{
+                                            boolean existe = false;
+
+                                            for(int i = 0; i < contactos.length && !existe; i++){
+                                                if(contactos[i] == null){
+                                                    contactos[i] = contac;
+                                                    existe = true;
+                                                }
+                                            }
+
+                                            if(existe){
+                                                System.out.println("Se ha añadido el contacto con exito");
+                                            }else{
+                                                System.out.println("Lo siento el contacto no se puede añadir");
+                                            }
+                                        }
+
+                                    }
+
+                                public boolean existeContato(Contacto contac) {
+                                        for(int i = 0; i < contactos.length; i++) {
+                                            if(contactos[i] != null && contac.equals(contactos[i])){
+                                                return true;
+                                            }
+                                        }
+                                        return false;
+                                }
+
+                                public void listarContactos() {
+
+                                    System.out.println("");
+
+                                        boolean encontrado = false;
+                                        for (int i = 0; i < contactos.length; i++) {
+                                            if(contactos[i] != null) {
+                                                System.out.println("Nombre del contacto " + contactos[i].getNombre() +
+                                                        " Numero de contacto " + contactos[i].getNumeroTelefono() +
+                                                        " Nombre de la organizacion " + contactos[i].getOrganizacion()) ;
+                                                encontrado = true;
+                                            }
+                                        }
+
+                                    if(!encontrado) {
+                                        System.out.println("La agenda se encuentra vacia");
+                                    }
+
+                                }
+
+                                public void buscarContacto(String nombre) {
+
+                                    System.out.println("");
+
+                                        boolean encontrado = false;
+
+                                    for (int i = 0; i < contactos.length && !encontrado; i++) {
+                                        if(contactos[i] != null && contactos[i].getNombre().equalsIgnoreCase(nombre)) {
+                                            System.out.println("El numero de telefono es: " + contactos[i].getNumeroTelefono());
+                                            encontrado = true;
+                                        }
+                                    }
+                                    if(!encontrado) {
+                                        System.out.println("El contacto no existe");
+                                    }
+                                }
+
+                                public boolean evaluarAgenda(){
+
+                                    System.out.println("");
+
+                                        for(int i = 0; i < contactos.length; i++) {
+                                            if(contactos[i] == null){
+                                                return false;
+                                            }
+                                        }
+                                        return true;
+                                }
+
+                                public void eliminaContacto() throws IOException {
+
+                                    System.out.println("");
+
+                                    boolean encontrado = false;
+
+                                    System.out.println("Digita el nombre");
+                                    String nombre = bfr.readLine();
+                                    for (int i = 0; i < contactos.length && !encontrado; i++) {
+                                        if (contactos[i] != null && contactos[i].getNombre().equalsIgnoreCase(nombre)) {
+                                            contactos[i] = null;
+                                            encontrado = true;
+
+                                        }
+                                    }
+                                    if(encontrado) {
+                                        System.out.println("Se ha eliminado el contacto");
+                                    }else{
+                                        System.out.println("No se pudo eliminar el contacto");
+                                    }
+
+                                }
+
+                                }
+
+                                package Ejercicio6;
+
+                                import java.io.BufferedReader;
+                                import java.io.IOException;
+                                import java.io.InputStreamReader;
+                                import java.util.InputMismatchException;
+
+                                public class Main6 {
+
+                                    public static void main(String[] args) throws IOException {
+
+                                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                                        boolean salir = false;
+                                        int opcion;
+
+                                        Telefono agendaTelefonica = new Telefono(3);
+                                        String nombre;
+                                        String numeroTelefono;
+                                        String organizacion;
+
+                                        Contacto contact;
+
+                                        while (!salir) {
+
+                                            System.out.println("");
+                                            System.out.println("1. Añadir contacto");
+                                            System.out.println("2. Listar contactos");
+                                            System.out.println("3. Buscar contacto");
+                                            System.out.println("4. Eliminar contacto");
+                                            System.out.println("5. Salir");
+
+                                            try {
+                                                System.out.println("");
+                                                System.out.println("Escribe una de las opciones");
+                                                opcion = Integer.parseInt(bfr.readLine());
+
+                                                switch (opcion) {
+                                                    case 1:
+                                                        System.out.println("");
+                                                        System.out.println("Escribe un nombre");
+                                                        nombre = bfr.readLine();
+
+                                                        System.out.println("Escribe un telefono");
+                                                        numeroTelefono = bfr.readLine();
+
+                                                        System.out.println("Escribe la organizacion");
+                                                        organizacion = bfr.readLine();
+
+                                                        contact = new Contacto(nombre, numeroTelefono, organizacion);
+
+                                                        agendaTelefonica.aniadirContacto(contact);
+                                                        if (agendaTelefonica.evaluarAgenda()) {
+                                                            System.out.println("La agenda esta llena no se puede almacenar mas contactos");
+                                                            System.out.println("");
+                                                        } else {
+                                                            System.out.println("Aun puedes almacenar contactoss");
+                                                            System.out.println("");
+                                                        }
+
+                                                        break;
+                                                    case 2:
+
+                                                        System.out.println("");
+                                                        agendaTelefonica.listarContactos();
+
+                                                        break;
+                                                    case 3:
+
+                                                        System.out.println("");
+                                                        System.out.println("Escribe un nombre");
+                                                        nombre = bfr.readLine();
+
+                                                        agendaTelefonica.buscarContacto(nombre);
+
+                                                        break;
+                                                    case 4:
+                                                        System.out.println("");
+                                                    agendaTelefonica.eliminaContacto();
+
+                                                        break;
+
+                                                    case 5:
+                                                        salir = true;
+                                                        break;
+                                                    default:
+                                                        System.out.println("Solo números entre 1 y 5");
+                                                }
+                                            } catch (InputMismatchException e) {
+                                                System.out.println("Debes insertar un número");
+                                                bfr.readLine();
+                                            }
+
+                                        }
+                                    }
+                                }
+
+
+                                
+    
+                            </code>
+                        </pre>
+          </div>  
+
+          <div class="ejercicio">
+            <h2 class="enunciado">7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del <br>
+                barrio y requiere una aplicación que permita registrar los vehículos que se
+                cuidan en estas <br>
+                instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y <br>
+                marca, y los datos del cliente como son nombre completo y número de
+                teléfono. Para cada <br>
+                vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y <br>
+                consultar si un vehículo se encuentra en el parqueadero. Recuerde que
+                el sistema debe terminar <br>
+                cuando el usuario así</h2>
+            <pre>
+                <code class="language-java" >
+                    package Ejercicio7;
+
+                    import Ejercicio6.Contacto;
+                    
+                    public class Vehiculo {
+                    
+                        private String placa;
+                        private String marca;
+                        private String nombreCliente;
+                        private String numeroTelefonoCliente;
+                    
+                        public Vehiculo() {
+                    
+                        }
+                    
+                        public Vehiculo(String placa, String marca, String nombreCliente, String numeroTelefonoCliente ) {
+                            this.placa = placa;
+                            this.marca = marca;
+                            this.nombreCliente = nombreCliente;
+                            this.numeroTelefonoCliente = numeroTelefonoCliente;
+                        }
+                    
+                        public String getPlaca() {
+                            return placa;
+                        }
+                    
+                        public void setPlaca(String placa) {
+                            this.placa = placa;
+                        }
+                    
+                        public String getMarca() {
+                            return marca;
+                        }
+                    
+                        public void setMarca(String marca) {
+                            this.marca = marca;
+                        }
+                    
+                        public String getNombreCliente() {
+                            return nombreCliente;
+                        }
+                    
+                        public void setNombreCliente(String nombreCliente) {
+                            this.nombreCliente = nombreCliente;
+                        }
+                    
+                        public String getNumeroTelefonoCliente() {
+                            return numeroTelefonoCliente;
+                        }
+                    
+                        public void setNumeroTelefonoCliente(String numeroTelefonoCliente) {
+                            this.numeroTelefonoCliente = numeroTelefonoCliente;
+                        }
+                    
+                        public boolean equals(Vehiculo v){
+                            if(this.placa.equalsIgnoreCase(v.placa)){
+                                return true;
+                            }
+                            return false;
+                        }
+                    
+                        @Override
+                        public String toString() {
+                            return "Vehiculo{" +
+                                    "placa='" + placa + '\'' +
+                                    ", marca='" + marca + '\'' +
+                                    '}';
+                        }
+                    }
+                     
+                    package Ejercicio7;
+
+                    import Ejercicio6.Contacto;
+
+                    import java.io.BufferedReader;
+                    import java.io.IOException;
+                    import java.io.InputStreamReader;
+
+                    public class Parqueadero {
+
+                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                        private Vehiculo[] vehiculos;
+
+                        public Parqueadero(){
+                            this.vehiculos = new Vehiculo[5];
+                        }
+
+                        public Parqueadero(int tamanio) {
+                            this.vehiculos = new Vehiculo[tamanio];
+                        }
+
+                        public void registrarehiculo(Vehiculo vehiculo) {
+
+                            System.out.println("");
+
+                            if(existeVehiculo(vehiculo)) {
+                                System.out.println("El Vehiculo ya se encuentra registrado");
+                            }else if(evaluarCuposDisponibles()) {
+                                System.out.println("El parqueadero se encuentra sin celdas disponibles," +
+                                        " no es posible registrar mas vehiculos");
+                            }else{
+                                boolean existe = false;
+
+                                for(int i = 0; i < vehiculos.length && !existe; i++){
+                                    if(vehiculos[i] == null){
+                                        vehiculos[i] = vehiculo;
+                                        existe = true;
+                                    }
+                                }
+
+                                if(existe){
+                                    System.out.println("Se registro el ingreso del vehiculo con exito");
+                                }else{
+                                    System.out.println("Lo sentimos el vehiculo no puede ser ingresado ");
+                                }
+                            }
+
+                        }
+
+                        public boolean existeVehiculo(Vehiculo vehiculo) {
+                            for(int i = 0; i < vehiculos.length; i++) {
+                                if(vehiculos[i] != null && vehiculo.equals(vehiculos[i])){
+                                    return true;
+                                }
+                            }
+                            return false;
+                        }
+
+                        public void consultarVehiculoDentro(String placa) {
+
+                            System.out.println("");
+
+                            boolean encontrado = false;
+
+                            for (int i = 0; i < vehiculos.length && !encontrado; i++) {
+                                if(vehiculos[i] != null && vehiculos[i].getPlaca().equalsIgnoreCase(placa)) {
+                                    System.out.println(" El vehiculo con placas : " + vehiculos[i].getPlaca() +
+                                            " Se encuentra dentro del parqueadero");
+                                    encontrado = true;
+                                }
+                            }
+                            if(!encontrado) {
+                                System.out.println(" El Vehiculo no se encuentra en nuestras instalaciones ");
+                            }
+                        }
+
+                        public boolean vehiculoIngresado(Vehiculo vehiculo) {
+                            boolean ingresado = false;
+                            for(int i = 0; i < vehiculos.length; i++) {
+                                if(vehiculos[i] != null && vehiculo.equals(vehiculos[i])){
+                                    return true;
+                                }
+                            }
+                            return false;
+                        }
+
+                        public boolean evaluarCuposDisponibles(){
+
+                            System.out.println("");
+
+                            for(int i = 0; i < vehiculos.length; i++) {
+                                if(vehiculos[i] == null){
+                                    return false;
+                                }
+                            }
+                            return true;
+                        }
+
+                        public void salidaVehiculo() throws IOException {
+
+                            System.out.println("");
+
+                            boolean encontrado = false;
+
+                            System.out.println("Digita la placa del vehiculo");
+                            String placa = bfr.readLine();
+                            for (int i = 0; i < vehiculos.length && !encontrado; i++) {
+                                if (vehiculos[i] != null && vehiculos[i].getPlaca().equalsIgnoreCase(placa)) {
+                                    vehiculos[i] = null;
+                                    encontrado = true;
+
+                                }
+                            }
+                            if(encontrado) {
+                                System.out.println("Registro de la salida del vehiculo exitosa!!!");
+                            }else{
+                                System.out.println("El vehiculo no se encuentra registrado");
+                            }
+
+                        }
+
+                    }
+
+                </code>
+            </pre>
+       </div>  
+
+        <div class="ejercicio">
+            <h2 class="enunciado">8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus <br>
+                clientes en los cursos de enseñanza automovilística y establecer quienes lo han
+                aprobado para <br>
+                continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir <br>
+                registrar su ingreso al curso, consultar usuarios que hayan
+                presentado el curso y resultados de la <br>
+                prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el <br>
+                usuario así lo indique. Tenga presente que la
+                escuela tiene capacidad máxima de gestionar 8 <br>
+                usuarios en su totalidad.</h2>
+            <pre>
+                <code class="language-java" >
+                    package Ejercicio8;
+
+                    import Ejercicio7.Vehiculo;
+
+                    public class Usuario {
+
+                        private String nombre;
+                        private String telefono;
+
+                        private int calificacion;
+
+
+                        public Usuario(String nombre) {
+
+                            this.nombre = nombre;
+                        }
+
+                        public Usuario(String nombre, String telefono ) {
+                            this.nombre = nombre;
+                            this.telefono = telefono;
+                        }
+
+                        public Usuario(String nombre, String telefono, int calificacion) {
+                            this.nombre = nombre;
+                            this.telefono = telefono;
+                            this.calificacion = calificacion;
+                        }
+
+                        public String getNombre() {
+                            return this.nombre;
+                        }
+
+                        public void setNombre(String nombre) {
+                            this.nombre = nombre;
+                        }
+
+                        public String getTelefono() {
+                            return this.telefono;
+                        }
+
+                        public void setTelefono(String telefono) {
+                            this.telefono = telefono;
+                        }
+
+                        public int getCalificacion() {
+                            return this.calificacion;
+                        }
+
+                        public void setCalificacion(int calificacion) {
+                            this.calificacion = calificacion;
+                        }
+
+
+
+                        public boolean equals(Usuario u){
+                            if(this.nombre.equalsIgnoreCase(u.nombre)) {
+                                return true;
+                            }
+                            return false;
+                        }
+
+                        @Override
+                        public String toString() {
+                            return "Usuario{" +
+                                    "nombre='" + nombre + '\'' +
+                                    ", telefono='" + telefono + '\'' +
+                                    ", calificacion=" + calificacion +
+                                    '}';
+                        }
+                    }
+
+                    package Ejercicio8;
+
+                    import Ejercicio6.Contacto;
+
+                    import java.io.BufferedReader;
+                    import java.io.IOException;
+                    import java.io.InputStreamReader;
+
+                    public class EscuelaConduccion {
+
+                        BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                        private Usuario[] usuarios;
+
+                        public EscuelaConduccion(){
+                            this.usuarios = new Usuario[3];
+                        }
+
+                        public EscuelaConduccion(int tamanio) {
+                            this.usuarios = new Usuario[tamanio];
+                        }
+
+                        public void registrarCurso(Usuario user) {
+
+                            System.out.println("");
+
+                            if(existeUsuario(user)) {
+                                System.out.println("El Usuario ya se encuentra registrado");
+                            }else if(evaluarCuposDisponibles()) {
+                                System.out.println("Los cupos se encuentran ocupados, no es posible registrar mas usuarios");
+                            }else{
+                                boolean existe = false;
+
+                                for(int i = 0; i < usuarios.length && !existe; i++){
+                                    if(usuarios[i] == null){
+                                        usuarios[i] = user;
+                                        existe = true;
+                                    }
+                                }
+
+                                if(existe){
+                                    System.out.println("Se ha registrado el usuario con exito");
+                                }else{
+                                    System.out.println("Lo siento el usuario no se puede registrar");
+                                }
+                            }
+
+                        }
+
+
+                        public void listarPresentesEnCurso() {
+
+                            System.out.println("");
+
+                            boolean encontrado = false;
+                            for (int i = 0; i < usuarios.length; i++) {
+                                if(usuarios[i] != null) {
+                                    System.out.println("El Usuario " + usuarios[i].getNombre() +
+                                        " asistio al curso de conducción" ) ;
+                                    encontrado = true;
+                                }
+                            }
+
+                            if(!encontrado) {
+                                System.out.println("El usuario no asistio al curso de conduccuón");
+                            }
+
+                        }
+
+                        public void presentarPrueba(Usuario user) throws IOException {
+
+                            System.out.println("  Bienvenido a la prueba del curso ");
+                            System.out.println("Ingresa la calificacion que sacaste ");
+                            int nota = Integer.parseInt(bfr.readLine());
+                            user.setCalificacion(nota);
+                            for (int i = 0; i < usuarios.length; i++) {
+                                if (user.getCalificacion() >= 3 && user.getCalificacion() <= 5) {
+
+                                    System.out.println("Señor(a) " + user.getNombre() + " Usted aprobo el curso ");
+
+                                } else {
+
+                                    System.out.println("Señor(a) " + user.getNombre() + " Usted no aprobo el curso, por favor vuelvalo a intentar ");
+                                }
+                            }
+
+                        }
+
+                        public boolean existeUsuario(Usuario user) {
+                            for(int i = 0; i < usuarios.length; i++) {
+                                if(usuarios[i] != null && user.equals(usuarios[i])){
+                                    return true;
+                                }
+                            }
+                            return false;
+                        }
+                        public boolean evaluarCuposDisponibles(){
+
+                            System.out.println("");
+
+                            for(int i = 0; i < usuarios.length; i++) {
+                                if(usuarios[i] == null){
+                                    return false;
+                                }
+                            }
+                            return true;
+                        }
+                    }
+
+                    package Ejercicio8;
+
+                    import Ejercicio7.Vehiculo;
+
+                    import java.io.BufferedReader;
+                    import java.io.IOException;
+                    import java.io.InputStreamReader;
+                    import java.util.InputMismatchException;
+
+                    public class Main8 {
+
+                        public static void main(String[] args) throws IOException {
+
+                            BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
+                            boolean salir = false;
+                            int opcion;
+
+                            String nombre;
+                            String telefono;
+                            boolean aprobo;
+
+                            EscuelaConduccion escuelaConduccion = new EscuelaConduccion(8);
+
+                            Usuario user;
+                            Usuario users[] = new Usuario[8] ;
+
+                            while (!salir) {
+
+                                System.out.println("");
+                                System.out.println("           Escuela automovilística El Maestro   ");
+                                System.out.println("");
+                                System.out.println("1. Ingresar al curso");
+                                System.out.println("2. Listar ingreso al curso");
+                                System.out.println("3. Consultar Resultados");
+                                System.out.println("4. Salir");
+
+                                try {
+                                    System.out.println("");
+                                    System.out.println("Escribe una de las opciones");
+                                    opcion = Integer.parseInt(bfr.readLine());
+
+                                    switch (opcion) {
+                                        case 1:
+                                            System.out.println("");
+                                            System.out.println("Digita tu nombre");
+                                            nombre = bfr.readLine();
+
+                                            System.out.println("Digita el numero telefono");
+                                            telefono = bfr.readLine();
+
+
+                                            user = new Usuario (nombre, telefono);
+
+                                            escuelaConduccion.registrarCurso(user);
+                                            if (escuelaConduccion.evaluarCuposDisponibles()) {
+                                                System.out.println("En el momento no hay cupos disponibles ");
+                                                System.out.println("");
+                                            } else {
+                                                System.out.println("Aun hay cupos disponibles ");
+                                                System.out.println("");
+                                            }
+
+                                            break;
+                                        case 2:
+
+                                            System.out.println("");
+                                            escuelaConduccion.listarPresentesEnCurso();
+
+
+                                            break;
+                                        case 3:
+
+                                            System.out.println("Ingresa tu nombre ");
+                                            nombre = bfr.readLine();
+                                            user = new Usuario(nombre);
+                                            escuelaConduccion.presentarPrueba(user);
+
+                                            break;
+
+
+                                        case 4:
+                                            salir = true;
+                                            break;
+                                        default:
+                                            System.out.println("Solo números entre 1 y 4");
+                                    }
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Debes insertar un número");
+                                    bfr.readLine();
+                                } catch (IOException e) {
+                                    throw new RuntimeException(e);
+                                }
+
+                            }
+
+                        }
+                    }
+
+                </code>
+            </pre>
+    </div>  
+
+    </div>
+    
+</body>
+</html>
